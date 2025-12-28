@@ -1,35 +1,27 @@
 ---
-import Header from "../components/Header.astro";
+import Header from '../components/Header.astro';
 import Project from "../components/Project.astro";
 import Sidebar from "../components/Sidebar.astro";
 const projects = [
-  {
-    title: "CodeCraft",
+   {
+   projectLink: "https://ubcmmhc.com/", 
+   githubLink: "https://github.com/UBC-MMHC",
+   title: "Club Website | Mens Mental Health Club",
     desc: [
-      "Developed a large-scale e-commerce platform for indie game developers",
+      "Developed a website for 100+ members at club",
       "Designed and implemented UI, backend, and database architecture",
-      "Contributed to RESTful API and GraphQL design",
-      "Led a team of three engineers for several months"
+      "Contributed to RESTful API design"
     ],
-    tech: ["React", "Next.js", "Node.js", "MongoDB", "Heroku"]
+    tech: ["React", "Next.js", "SpringBoot", "Postgres", "Heroku"]
   },
   {
-    title: "CloudMason",
+    title: "IT Help Desk Technician",
     desc: [
-      "Contributed to microservices architecture design for email distribution system",
-      "Created a backend infrastructure with queues and an event bus",
-      "Designed to handle a high volume ~3 million emails per day"
+ "Translated complex technical concepts into understandable language for non technical clients" ,
+"Provided remote support for software fixes, and system configuration.",
+"Diagnosed and resolved technical issues across Windows and MacOS systems.",
     ],
-    tech: ["Node.js", "RabbitMQ", "Docker", "Kubernetes"]
-  },
-  {
-    title: "Sarah (HealthEase.io)",
-    desc: [
-      "Contributed to Israel's largest telehealth platform for doctors and patients",
-      "Developed appointment and billing systems",
-      "Resolved live production bugs and server issues"
-    ],
-    tech: ["React", "Node.js", "Express.js", "MySQL", "AWS"]
+    tech: ["Windows", "MacOS", "Linux", "Virtualization", "Sys Admin"]
   }
 ];
 ---
@@ -37,10 +29,10 @@ const projects = [
 <!DOCTYPE html>
 <html
 >
-  <Header title="Software Development | Sam Bernstein" />
+  <Header title="Experience | Jagman Sidhu" />
   <body>
     <div class="content">
-        <Sidebar selectedItem="software-development" />
+        <Sidebar selectedItem="experience" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
@@ -50,7 +42,7 @@ const projects = [
             >
           </div>
           <div class="content-container">
-            <h1>Software Development</h1>
+            <h1>Experience</h1>
             <section class="items-container">
                 <div class="resouce-items">
                     {projects.map(project => (
@@ -58,6 +50,8 @@ const projects = [
                         title={project.title} 
                         desc={project.desc}
                         tech={project.tech}
+                        projectLink={project.projectLink}   
+                        githubLink={project.githubLink}
                       />
                     ))}
                   </div>

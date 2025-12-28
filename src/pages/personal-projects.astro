@@ -4,28 +4,22 @@ import Project from '../components/Project.astro';
 import Sidebar from '../components/Sidebar.astro';
 const projects = [
   {
-    title: "TeleJS",
+    githubLink: "https://github.com/jagmansidhu/DaRoomate",
+    title: "DaRoomate",
     desc: [
-      "Built a lightweight, open-source Slack API framework for efficient bot development",
-      "Developed in Node.js and published as an NPM package"
+      "Built a full stack Roomate management app to help landlord manage properties",
+      "Developed in SpringBoot, React and published using AWS"
     ],
-    tech: ["Node.js", "NPM"]
+    tech: ["SpringBoot", "React", "Postgres", "AWS", "Docker"]
   },
   {
-    title: "pyPrompter",
+    githubLink: "https://github.com/jagmansidhu/DiagnosisHealthNLP",
+    title: "MentalHealthDiagnosis",
     desc: [
-      "Contributed to a popular open-source Python pip package for building interactive CLIs",
-      "Developed a feature that lets you 'freeze' inquirer choices"
+      "Built a machine learning pipeline that automatically retrains on new labeled data to continuously refine diagnostic accuracy",
+      "Fine-tuned a Transformers-based NLP model to identify key diagnostic indicators from text"
     ],
-    tech: ["Python"]
-  },
-  {
-    title: "WebAssetHub",
-    desc: [
-      "Created a web scraper tool that monitors digital assets across multiple platforms and offers them at competitive prices",
-      "Sold over 700 items"
-    ],
-    tech: ["Python", "Selenium"]
+    tech: ["Python", "Pandas", "NumPy", "Transformers"]
   }
 ];
 ---
@@ -33,7 +27,7 @@ const projects = [
 <!DOCTYPE html>
 <html
 >
-  <Header title="Personal Projects | Sam Bernstein" />
+  <Header title="Personal Projects | Jagman Sidhu" />
   <body>
     <div class="content">
         <Sidebar selectedItem="personal-projects" />
@@ -54,6 +48,8 @@ const projects = [
                         title={project.title} 
                         desc={project.desc}
                         tech={project.tech}
+                        projectLink={project.projectLink}   
+                        githubLink={project.githubLink}
                       />
                     ))}
                   </div>
