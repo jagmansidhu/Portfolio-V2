@@ -15,12 +15,33 @@ import Sidebar from "../components/Sidebar.astro";
         <div class="container">
           <main class="fold-content-container">d
             <div class="fold-content">
-              <h1>Hi, I'm Jagman.<br />I build things.</h1>
-              <p class="lead">
-                Aspiring backend developer and cloud architect. A proactive team member dedicated to continuous learning, problem-solving, and aiding teammates in achieving quicker outcomes.
-              </p>
+              <div class="hero-intro">
+
+                <div class="hero-text">
+                  <h1>Hi, I'm Jag.<br />I love building.</h1>
+                  <p class="lead">
+                    Aspiring backend developer and cloud architect. A proactive team member dedicated to continuous learning, problem-solving, and aiding teammates in achieving quicker outcomes.
+                  </p>
+                </div>
+                <img src="./assets/meme.png" alt="Jagman Sidhu" class="hero-image" />
+              </div>
             </div>
-            <a href="mailto:jagmansidhu1@gmail.com	" class="button w-button">Contact</a>
+           <div class="button-group">
+            <a href="mailto:jagmansidhu1@gmail.com" class="button w-button">
+              <img src="./assets/gmail.svg" alt="" class="button-icon" />
+              Contact
+            </a>
+
+            <a href="https://github.com/jagmansidhu" target="_blank" class="button w-button">
+              <img src="./assets/github.svg" alt="" class="button-icon" />
+              GitHub
+            </a>
+
+            <a href="https://linkedin.com/in/jagmans" target="_blank" class="button w-button">
+              <img src="./assets/icons8-linkedin.svg" alt="" class="button-icon" />
+              LinkedIn
+            </a>
+          </div>
           </main>
           <div class="projects-section">
             <!-- Projects -->
@@ -82,3 +103,38 @@ import Sidebar from "../components/Sidebar.astro";
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
 </html>
+
+<style>
+  .button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap; /* Keeps it responsive */
+  }
+
+  .button.w-button {
+    /* 1. Make them a consistent width */
+    min-width: 140px; 
+    
+    /* 2. Center the content inside */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Centers text and icon together */
+    
+    /* 3. Spacing and Alignment */
+    gap: 10px; 
+    padding: 12px 20px;
+    
+    /* 4. Ensure it looks like a button */
+    text-align: center;
+    white-space: nowrap; /* Prevents text from jumping to a second line */
+  }
+
+  .button-icon {
+    width: 18px;
+    height: 18px;
+
+    filter: brightness(0) invert(1);
+    display: block;
+  }
+</style>
