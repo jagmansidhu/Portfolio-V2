@@ -1,34 +1,51 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [hidden, setHidden] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > lastScrollY && scrollY > 50) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY = scrollY;
+    };
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleNavClick = (e, sectionId) => {
       e.preventDefault();
       const target = document.getElementById(sectionId);
-      const scrollContainer = document.querySelector('.main');
-      if (target && scrollContainer) {
-        scrollContainer.scrollTo({
-          top: target.offsetTop - 32,
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80, // Offset for top nav
           behavior: 'smooth'
         });
+        setMobileOpen(false);
       }
-      setIsOpen(false);
     };
 
-    const navLinks = document.querySelectorAll('.nav-link-container[data-section]');
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-      const sectionId = link.getAttribute('data-section');
+      const sectionId = link.getAttribute('href').substring(1);
       link.onclick = (e) => handleNavClick(e, sectionId);
     });
 
     const sections = document.querySelectorAll('section[id]');
-    const scrollContainer = document.querySelector('.main');
     
     let observer;
-    if (scrollContainer && sections.length) {
+    if (sections.length) {
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -38,8 +55,7 @@ export default function Sidebar() {
           });
         },
         {
-          root: scrollContainer,
-          rootMargin: '-20% 0px -60% 0px',
+          rootMargin: '-50% 0px -50% 0px',
           threshold: 0
         }
       );
@@ -51,97 +67,33 @@ export default function Sidebar() {
     };
   }, []);
 
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <aside
-      data-animation="default"
-      data-collapse="medium"
-      data-duration="400"
-      data-easing="ease"
-      data-easing2="ease"
-      role="banner"
-      className="sidebar w-nav"
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: hidden ? -100 : 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="top-nav"
     >
-      <div className="nav-content">
-        <a href="#home" className="w-nav-brand" aria-label="home" onClick={(e) => { e.preventDefault(); document.querySelector('.main')?.scrollTo({top: 0, behavior: 'smooth'}); }}>
-          <div className="niv-data">
-            <img
-              src="/assets/jag.jpg"
-              loading="eager"
-              alt="Profile picture"
-              className="niv-image"
-            />
-            <div>
-              <div className="label-white">Jagman Sidhu</div>
-              <div className="label-gray">Software Engineer</div>
-            </div>
-          </div>
-        </a>
+      <a href="#home" className="brand" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+        <h3 style={{ margin: 0, fontSize: '1.5rem' }}>
+          <span className="text-gradient">Jag</span>man.
+        </h3>
+      </a>
 
-        <nav 
-          role="navigation" 
-          style={{ display: isOpen ? 'block' : '' }}
-          className={`w-nav-menu ${isOpen ? 'is-visible is-open' : ''}`}
-        >
-          <a
-            href="#home"
-            className={`nav-link-container w-inline-block ${activeSection === 'home' ? 'w--current' : ''}`}
-            data-section="home"
-          >
-            <img
-              src="/assets/home.svg"
-              loading="eager"
-              alt=""
-              className="nav-link-image"
-            />
-            <div>Home</div>
-          </a>
-          <a
-            href="#experience"
-            className={`nav-link-container w-inline-block ${activeSection === 'experience' ? 'w--current' : ''}`}
-            data-section="experience"
-          >
-            <img
-              src="/assets/dns.svg"
-              loading="eager"
-              alt=""
-              className="nav-link-image"
-            />
-            <div>Experience</div>
-          </a>
-          <a
-            href="#projects"
-            className={`nav-link-container w-inline-block ${activeSection === 'projects' ? 'w--current' : ''}`}
-            data-section="projects"
-          >
-            <img
-              src="/assets/browser.svg"
-              loading="eager"
-              alt=""
-              className="nav-link-image"
-            />
-            <div>Projects</div>
-          </a>
-        </nav>
-
-        <div
-          className="navbar-icon-button w-nav-button"
-          aria-label="menu"
-          role="button"
-          tabIndex="0"
-          onClick={toggleNav}
-        >
-          <img
-            src="/assets/menu.svg"
-            loading="eager"
-            alt=""
-            className="navbar-icon"
-          />
-        </div>
+      <div className="menu-toggle" onClick={() => setMobileOpen(!mobileOpen)} style={{ color: 'var(--text-main)' }}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </div>
-    </aside>
+
+      <div className={`nav-links ${mobileOpen ? 'open' : ''}`}>
+        <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+        <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
+        <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
+        <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
+      </div>
+    </motion.nav>
   );
 }
