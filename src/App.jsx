@@ -130,7 +130,7 @@ function App() {
             TECHNICAL EXPERIENCE
           </motion.h2>
           <p className="section-lead">
-            Roles where I shipped software, solved real user problems, and worked across the stack.
+            Software development and IT roles.
           </p>
           <div className="storystream">
             {experience.map((item, id) => (
@@ -164,7 +164,7 @@ function App() {
             PROJECTS
           </motion.h2>
           <p className="section-lead">
-            Hackathon builds and personal projects — each with a live demo or public repo where available.
+            Hackathon builds and personal projects with live demos or public repos.
           </p>
           <div className="storystream">
             {projects.map((project, id) => (

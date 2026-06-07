@@ -4,9 +4,9 @@ export const projects = [
     githubLink: "https://github.com/jagmansidhu/DaRoommate",
     title: "TheRoommate",
     subtitle: "Aug 2025 – Present",
-    tagline: "Full-stack housing app for roommates and landlords",
+    tagline: "Housing app for roommates and landlords",
     desc: [
-      "Built and deployed a housing app with expense splitting, chores, lease management, and real-time landlord messaging using Spring Boot, React, PostgreSQL, and WebSocket."
+      "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
     ],
     tech: ["Spring Boot", "React", "TypeScript", "PostgreSQL", "Docker", "WebSocket", "Railway"]
   },
@@ -14,9 +14,9 @@ export const projects = [
     githubLink: "https://github.com/jagmansidhu/nodify",
     title: "Nodify",
     subtitle: "Jan 2026 · nwHacks",
-    tagline: "AI email triage with urgency scoring and trend dashboards",
+    tagline: "Email urgency scoring and trend dashboards with Gemini",
     desc: [
-      "Built at nwHacks 2026: an email assistant that scores urgency with the Gemini API and tracks trends across security, meetings, and bills."
+      "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
     ],
     tech: ["Next.js", "TypeScript", "Gemini API"]
   },
@@ -24,9 +24,9 @@ export const projects = [
     githubLink: "https://github.com/jagmansidhu/Lumina",
     title: "Lumina",
     subtitle: "Jun 2025 – Aug 2025",
-    tagline: "NLP screening tool for low-friction mental health support",
+    tagline: "Sentiment and intent classification from user text",
     desc: [
-      "Fine-tuned Transformer models to classify sentiment and intent, giving users a low-friction entry point for mental health support."
+      "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
     ],
     tech: ["Python", "Transformers", "Pandas", "NumPy"]
   }
@@ -41,7 +41,7 @@ export const experience = [
     subtitle: "Sept 2025 – Present",
     location: "Vancouver, BC",
     desc: [
-      "Built a full-stack platform for 65+ members with Stripe memberships, JWT and Google OAuth auth, and an admin dashboard for events and finances."
+      "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
     ],
     tech: ["Spring Boot", "Next.js", "PostgreSQL", "REST APIs", "Java", "TypeScript"]
   },
@@ -50,9 +50,9 @@ export const experience = [
     role: "UBC CIC × AWS Hackathon Winner",
     subtitle: "May 2026",
     location: "Vancouver, BC",
-    tagline: "UBC-Newcomers — connection app for transfer, international, and first-year students",
+    tagline: "Campus connection app for transfer, international, and first-year students",
     desc: [
-      "Won at UBC building a spontaneous connection app that helps new students explore campus through geofenced landmarks, discover scraped club and faculty events, and meet peers via AI matchmaking with Claude on AWS Bedrock."
+      "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
     ],
     tech: ["TypeScript", "AWS ECS", "Amazon Cognito", "AWS Bedrock", "Amazon S3", "Claude"]
   },
@@ -62,7 +62,7 @@ export const experience = [
     subtitle: "Jan 2023 – Jun 2023",
     location: "Calgary, AB",
     desc: [
-      "Diagnosed hardware and network issues across Windows, macOS, and Linux while cutting turnaround time by 40% with PowerShell and Bash automation."
+      "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
     ],
     tech: ["Windows", "macOS", "Linux", "PowerShell", "Bash"]
   }
