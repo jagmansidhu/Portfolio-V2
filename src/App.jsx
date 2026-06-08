@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import Sidebar from './components/Sidebar';
 import Project from './components/Project';
 import FeaturedCarousel from './components/FeaturedCarousel';
@@ -187,6 +188,7 @@ function App() {
       <footer style={{ borderTop: '1px solid var(--surface-slate)', padding: '4rem 2rem', textAlign: 'center' }}>
         <p className="mono-label text-muted" style={{ fontSize: '12px' }}>© 2026 JAGMAN SIDHU. BUILT WITH REACT.</p>
       </footer>
+      <Analytics />
     </div>
   );
 }
