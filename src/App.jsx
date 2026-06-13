@@ -68,57 +68,6 @@ function App() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="section-wrapper">
-        <div className="section-content">
-          <motion.h2 
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="section-title"
-          >
-            TECHNICAL SKILLS
-          </motion.h2>
-
-          <div className="skills-grid">
-            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-              <h4>LANGUAGES</h4>
-              <div className="chips">
-                {["Java", "TypeScript", "C++", "C", "SQL", "HTML/CSS"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
-              </div>
-            </motion.div>
-            
-            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-              <h4>FRAMEWORKS</h4>
-              <div className="chips">
-                {["Spring Boot", "Spring Security", "React", "Next.js", "Tailwind CSS"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
-              </div>
-            </motion.div>
-
-            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-              <h4>DATABASES & SEC</h4>
-              <div className="chips">
-                {["PostgreSQL", "JWT", "OAuth 2.0", "REST APIs", "WebSocket"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
-              </div>
-            </motion.div>
-
-            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-              <h4>CLOUD & DEVOPS</h4>
-              <div className="chips">
-                {["AWS (EC2, S3, RDS)", "Docker", "GitHub Actions", "Linux", "Git"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
-              </div>
-            </motion.div>
-
-            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}>
-              <h4>TOOLS</h4>
-              <div className="chips">
-                {["Jira", "Postman", "Maven", "JUnit", "Chai", "Railway"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="section-wrapper">
         <div className="section-content">
@@ -180,6 +129,57 @@ function App() {
                 githubLink={project.githubLink}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="section-wrapper">
+        <div className="section-content">
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title"
+          >
+            TECHNICAL SKILLS
+          </motion.h2>
+
+          <div className="skills-grid">
+            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+              <h4>LANGUAGES</h4>
+              <div className="chips">
+                {["Java", "TypeScript", "C++", "C", "SQL", "HTML/CSS"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
+              </div>
+            </motion.div>
+            
+            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+              <h4>FRAMEWORKS</h4>
+              <div className="chips">
+                {["Spring Boot", "Spring Security", "React", "Next.js", "Tailwind CSS"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
+              </div>
+            </motion.div>
+
+            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+              <h4>DATABASES & SEC</h4>
+              <div className="chips">
+                {["PostgreSQL", "JWT", "OAuth 2.0", "REST APIs", "WebSocket"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
+              </div>
+            </motion.div>
+
+            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
+              <h4>CLOUD & DEVOPS</h4>
+              <div className="chips">
+                {["AWS (EC2, S3, RDS)", "Docker", "GitHub Actions", "Linux", "Git"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
+              </div>
+            </motion.div>
+
+            <motion.div className="skill-category" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}>
+              <h4>TOOLS</h4>
+              <div className="chips">
+                {["Jira", "Postman", "Maven", "JUnit", "Chai", "Railway"].map(skill => <span className="chip" key={skill}>{skill}</span>)}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

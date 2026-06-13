@@ -82,9 +82,9 @@ export default function Sidebar() {
 
       <div className={`nav-links ${mobileOpen ? 'open' : ''}`}>
         <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
-        <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
         <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
         <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
+        <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
       </div>
     </nav>
   );

@@ -6,9 +6,8 @@ const featuredProjects = [
     id: 1,
     title: "Men's Mental Health Club",
     link: "https://ubcmmhc.com/",
-    image: "/assets/MensMentalHealthWeb.png", // Replace with actual screenshot
+    image: "/assets/MensMentalHealthWeb.png",
     type: "COMMUNITY PLATFORM",
-    accent: "rgba(60, 255, 208, 0.9)" // Jelly Mint overlay
   },
   {
     id: 2,
@@ -92,7 +91,7 @@ export default function FeaturedCarousel() {
               >
                 <button className="carousel-overlay-arrow left" onClick={goPrev} aria-label="Previous project">←</button>
                 <div className="carousel-overlay-center" onClick={() => window.open(project.link, '_blank')}>
-                  <div className="hero-display" style={{ color: 'var(--jelly-mint)', fontSize: '64px' }}>
+                  <div className="carousel-overlay-text hero-display">
                     GO TO WEBSITE ↗
                   </div>
                 </div>
@@ -100,14 +99,12 @@ export default function FeaturedCarousel() {
               </motion.div>
 
               <img src={project.image} alt={project.title} className="carousel-bg" />
-              
-              <div className="carousel-overlay" style={{ backgroundColor: project.accent }}></div>
 
               <div className="carousel-content">
-                <div className="mono-label" style={{ color: '#ffffff', fontSize: '11px', marginBottom: '8px' }}>
+                <div className="mono-label carousel-kicker">
                   {project.type}
                 </div>
-                <h3 className="story-title" style={{ color: '#ffffff', marginBottom: '16px', fontSize: '28px' }}>
+                <h3 className="story-title carousel-title">
                   {project.title}
                 </h3>
               </div>

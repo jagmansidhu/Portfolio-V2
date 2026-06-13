@@ -1,5 +1,15 @@
 export const projects = [
   {
+    githubLink: "https://github.com/wtarit/UBC-Newcomers",
+    title: "UBC-Newcomers",
+    subtitle: "May 2026 · UBC CIC × AWS Hackathon Winner",
+    tagline: "Campus connection app for transfer, international, and first-year students",
+    desc: [
+      "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
+    ],
+    tech: ["TypeScript", "AWS ECS", "Amazon Cognito", "AWS Bedrock", "Amazon S3", "Claude"]
+  },
+  {
     projectLink: "https://theroommate-production.up.railway.app/",
     githubLink: "https://github.com/jagmansidhu/DaRoommate",
     title: "TheRoommate",
@@ -44,17 +54,6 @@ export const experience = [
       "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
     ],
     tech: ["Spring Boot", "Next.js", "PostgreSQL", "REST APIs", "Java", "TypeScript"]
-  },
-  {
-    githubLink: "https://github.com/wtarit/UBC-Newcomers",
-    role: "UBC CIC × AWS Hackathon Winner",
-    subtitle: "May 2026",
-    location: "Vancouver, BC",
-    tagline: "Campus connection app for transfer, international, and first-year students",
-    desc: [
-      "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
-    ],
-    tech: ["TypeScript", "AWS ECS", "Amazon Cognito", "AWS Bedrock", "Amazon S3", "Claude"]
   },
   {
     role: "IT Support Specialist",
