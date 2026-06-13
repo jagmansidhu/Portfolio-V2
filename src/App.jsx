@@ -90,11 +90,13 @@ function App() {
                 company={item.company}
                 tagline={item.tagline}
                 subtitle={item.subtitle}
+                subtitleBold={item.subtitleBold}
                 location={item.location}
                 desc={item.desc}
                 tech={item.tech}
                 projectLink={item.projectLink}   
                 githubLink={item.githubLink}
+                linkedinLink={item.linkedinLink}
                 isExperience={true}
               />
             ))}
@@ -123,10 +125,12 @@ function App() {
                 title={project.title} 
                 tagline={project.tagline}
                 subtitle={project.subtitle}
+                subtitleBold={project.subtitleBold}
                 desc={project.desc}
                 tech={project.tech}
                 projectLink={project.projectLink}   
                 githubLink={project.githubLink}
+                linkedinLink={project.linkedinLink}
               />
             ))}
           </div>

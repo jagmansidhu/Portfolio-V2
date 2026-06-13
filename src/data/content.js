@@ -1,8 +1,10 @@
 export const projects = [
   {
     githubLink: "https://github.com/wtarit/UBC-Newcomers",
+    linkedinLink: "https://www.linkedin.com/posts/ubc-cic_ubc-generativeai-hackathon-activity-7464827663828803585-sK7Y",
     title: "UBC-Newcomers",
-    subtitle: "May 2026 · UBC CIC × AWS Hackathon Winner",
+    subtitle: "May 2026 · ",
+    subtitleBold: "UBC CIC × AWS Hackathon Winner",
     tagline: "Campus connection app for transfer, international, and first-year students",
     desc: [
       "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."

@@ -57,6 +57,16 @@
   display: block;
 }
 
+.story-date-bold {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.story-date-star {
+  color: var(--jelly-mint);
+  margin-right: 0.35rem;
+}
+
 .story-location {
   display: block;
   font-size: 10px;
