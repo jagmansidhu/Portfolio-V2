@@ -163,6 +163,29 @@ a:hover {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+.data-hero {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.data-page-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.nav-links a.nav-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 80vh;
@@ -268,6 +291,15 @@ a:hover {
 
 .featured-wrapper {
   width: 100%;
+}
+
+.page-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
 .carousel-indicators {

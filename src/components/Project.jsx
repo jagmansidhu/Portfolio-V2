@@ -10,17 +10,20 @@ export default function Project({
   desc = [],
   tech = [],
   projectLink,
+  paperLink,
   githubLink,
   linkedinLink,
+  notionLink,
   subtitle,
   subtitleBold,
   location,
-  isExperience
+  isExperience,
+  isDataProject
 }) {
   const [expanded, setExpanded] = useState(false);
   const hasProjectLink = projectLink && projectLink !== "cheese" && projectLink !== "";
   const displayTitle = role || title;
-  const linkTarget = hasProjectLink ? projectLink : null;
+  const linkTarget = paperLink || (hasProjectLink ? projectLink : null) || notionLink || githubLink || null;
   const hasDetails = desc.length > 0 || tech.length > 0;
 
   const handleToggle = (event) => {
@@ -73,6 +76,8 @@ export default function Project({
           <div className="story-title-group">
             {isExperience ? (
               <div className="kicker-label">EXPERIENCE</div>
+            ) : isDataProject ? (
+              <div className="kicker-label">DATA PROJECT</div>
             ) : (
               <div className="kicker-label">PROJECT</div>
             )}
@@ -93,6 +98,16 @@ export default function Project({
 
           <div className="story-header-actions">
             <div className="story-links">
+              {paperLink && (
+                <a href={paperLink} className="link-icon link-icon-paper" target="_blank" rel="noopener noreferrer" aria-label="Read paper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                </a>
+              )}
               {hasProjectLink && (
                 <a href={projectLink} className="link-icon" target="_blank" rel="noopener noreferrer" aria-label="Live site">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -113,6 +128,17 @@ export default function Project({
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+              )}
+              {notionLink && (
+                <a href={notionLink} className="link-icon" target="_blank" rel="noopener noreferrer" aria-label="Notion write-up">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>
                 </a>
               )}

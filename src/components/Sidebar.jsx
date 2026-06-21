@@ -1,45 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 50);
-      lastScrollY = scrollY;
+      setIsScrolled(window.scrollY > 50);
     };
-    
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    const handleNavClick = (e, sectionId) => {
-      e.preventDefault();
-      const target = document.getElementById(sectionId);
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 80, // Offset for top nav
-          behavior: 'smooth'
-        });
-        setMobileOpen(false);
-      }
-    };
-
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      const sectionId = link.getAttribute('href').substring(1);
-      link.onclick = (e) => handleNavClick(e, sectionId);
-    });
+    if (!isHomePage) return;
 
     const sections = document.querySelectorAll('section[id]');
-    
     let observer;
+
     if (sections.length) {
       observer = new IntersectionObserver(
         (entries) => {
@@ -60,17 +43,22 @@ export default function Sidebar() {
     return () => {
       if (observer) observer.disconnect();
     };
-  }, []);
+  }, [isHomePage]);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  const routeClass = (path) =>
+    location.pathname === path ? 'active' : '';
 
   return (
-    <nav 
-      className={`top-nav ${isScrolled ? 'scrolled' : ''}`}
-    >
-      <a href="#home" className="brand" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+    <nav className={`top-nav ${isScrolled ? 'scrolled' : ''}`}>
+      <Link to="/" className="brand">
         <h3>
           <span>JAG</span>MAN
         </h3>
-      </a>
+      </Link>
 
       <div className="menu-toggle" onClick={() => setMobileOpen(!mobileOpen)} style={{ color: 'var(--text-primary)' }}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -81,10 +69,21 @@ export default function Sidebar() {
       </div>
 
       <div className={`nav-links ${mobileOpen ? 'open' : ''}`}>
-        <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
-        <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
-        <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
-        <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
+        <Link
+          to="/"
+          className={`nav-link ${isHomePage && !location.hash && activeSection === 'home' ? 'active' : ''}`}
+        >
+          Home
+        </Link>
+        <Link to="/experience" className={`nav-link ${routeClass('/experience')}`}>
+          Experience
+        </Link>
+        <Link to="/projects" className={`nav-link ${routeClass('/projects')}`}>
+          Projects
+        </Link>
+        <Link to="/data" className={`nav-link ${routeClass('/data')}`}>
+          Data
+        </Link>
       </div>
     </nav>
   );
