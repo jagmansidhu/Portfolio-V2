@@ -17,6 +17,23 @@ const HOVER_PICK_MS = 500;
 const HOVER_LEAVE_MS = 180;
 /** open→spine + hold + spine→shelf */
 const PUT_AWAY_MS = 700;
+const MOBILE_MQ = '(max-width: 800px)';
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia(MOBILE_MQ).matches : false
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_MQ);
+    const onChange = () => setMobile(mq.matches);
+    onChange();
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  return mobile;
+}
 
 const POSES = {
   shelved: { x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 },
@@ -43,13 +60,19 @@ const MUTED_SPINES = [
 
 export default function Books() {
   const reduce = useReducedMotion();
-  const [view, setView] = useState('shelves');
+  const isMobile = useIsMobile();
+  const [view, setView] = useState(() =>
+    typeof window !== 'undefined' && window.matchMedia(MOBILE_MQ).matches ? 'list' : 'shelves'
+  );
   const [activeId, setActiveId] = useState(null);
   const [closingId, setClosingId] = useState(null);
   const hoverTimer = useRef(null);
   const pendingId = useRef(null);
   const activeIdRef = useRef(null);
   const closingIdRef = useRef(null);
+
+  // On phones: vertical stack of horizontal book rows (page scroll)
+  const stackLayout = isMobile;
 
   useEffect(() => () => clearHoverTimer(hoverTimer), []);
 
@@ -201,34 +224,40 @@ export default function Books() {
       {view === 'list' ? (
         <BooksList read={read} nowNext={nowNext} />
       ) : (
-        <div className="library-room">
+        <div className={`library-room${stackLayout ? ' is-spine-stack' : ''}`}>
           <Shelf
             flag="Read"
             flagTone="read"
-            hint="most recently read on left"
+            hint={stackLayout ? undefined : 'most recently read on left'}
             books={read}
             activeId={activeId}
             closingId={closingId}
-            onActivate={activateBook}
-            onPickNow={pickBookNow}
-            onRelease={releaseBook}
+            onActivate={stackLayout ? undefined : activateBook}
+            onPickNow={stackLayout ? undefined : pickBookNow}
+            onRelease={stackLayout ? undefined : releaseBook}
             onShelved={handleShelved}
             reduce={reduce}
+            stackLayout={stackLayout}
           />
 
           <Shelf
+            id="now-next"
+            flag="Now & next"
             hoverFlags
             books={nowNext}
             activeId={activeId}
             closingId={closingId}
-            onActivate={activateBook}
-            onPickNow={pickBookNow}
-            onRelease={releaseBook}
+            onActivate={stackLayout ? undefined : activateBook}
+            onPickNow={stackLayout ? undefined : pickBookNow}
+            onRelease={stackLayout ? undefined : releaseBook}
             onShelved={handleShelved}
             reduce={reduce}
+            stackLayout={stackLayout}
           />
         </div>
       )}
+
+      <SkipToNowNext reduce={reduce} />
     </main>
   );
 }
@@ -238,6 +267,7 @@ function BooksList({ read, nowNext }) {
     <div className="library-list-room">
       <ListSection flag="Read" flagTone="read" books={read} />
       <ListSection
+        id="now-next"
         flag="Now & next"
         books={nowNext}
         showStatus
@@ -246,9 +276,60 @@ function BooksList({ read, nowNext }) {
   );
 }
 
-function ListSection({ flag, flagTone, books, showStatus = false }) {
+function SkipToNowNext({ reduce }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_MQ);
+
+    const update = () => {
+      if (!mq.matches) {
+        setVisible(false);
+        return;
+      }
+      const target = document.getElementById('now-next');
+      if (!target) {
+        setVisible(false);
+        return;
+      }
+      const top = target.getBoundingClientRect().top;
+      const scrolled = window.scrollY > 80;
+      const stillAbove = top > window.innerHeight * 0.5;
+      setVisible(scrolled && stillAbove);
+    };
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    mq.addEventListener('change', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+      mq.removeEventListener('change', update);
+    };
+  }, []);
+
+  const handleClick = () => {
+    const el = document.getElementById('now-next');
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: reduce ? 'auto' : 'smooth',
+      block: 'start',
+    });
+  };
+
   return (
-    <section className="library-list-section" aria-label={flag}>
+    <div className={`library-skip-pill-wrap${visible ? ' is-visible' : ''}`}>
+      <button type="button" className="library-skip-pill" onClick={handleClick}>
+        now & next ↓
+      </button>
+    </div>
+  );
+}
+
+function ListSection({ id, flag, flagTone, books, showStatus = false }) {
+  return (
+    <section id={id} className="library-list-section" aria-label={flag}>
       <div className="library-section-head">
         <div className="library-flags">
           <span className={`library-flag${flagTone ? ` library-flag-${flagTone}` : ''}`}>
@@ -281,6 +362,7 @@ function ListSection({ flag, flagTone, books, showStatus = false }) {
 }
 
 function Shelf({
+  id,
   flag,
   flagTone,
   flags,
@@ -291,9 +373,11 @@ function Shelf({
   closingId,
   onActivate,
   onPickNow,
+  onToggle,
   onRelease,
   onShelved,
   reduce,
+  stackLayout = false,
 }) {
   const flagItems = flags ?? (flag ? [{ label: flag, tone: flagTone }] : []);
   const ariaLabel = hoverFlags
@@ -301,14 +385,14 @@ function Shelf({
     : flagItems.map((f) => f.label).join(' & ');
 
   return (
-    <section className="library-bay" aria-label={ariaLabel}>
-      {(flagItems.length > 0 || hint) && !hoverFlags ? (
+    <section id={id} className="library-bay" aria-label={ariaLabel}>
+      {(flagItems.length > 0 || hint) ? (
         <div className="library-section-head">
           <div className="library-flags">
             {flagItems.map((item, index) => (
               <span key={item.label} className="library-flag-group">
                 {index > 0 ? <span className="library-flag-join">·</span> : null}
-                <span className={`library-flag library-flag-${item.tone}`}>
+                <span className={`library-flag${item.tone ? ` library-flag-${item.tone}` : ''}`}>
                   <FlagIcon />
                   <span>{item.label}</span>
                 </span>
@@ -332,10 +416,12 @@ function Shelf({
                 closing={closingId === bookKey(book)}
                 onActivate={onActivate}
                 onPickNow={onPickNow}
+                onToggle={onToggle}
                 onShelved={onShelved}
                 delay={reduce ? 0 : i * 24}
                 hoverFlag={hoverFlags}
                 reduce={reduce}
+                stackLayout={stackLayout}
               />
             ))
           )}
@@ -364,16 +450,18 @@ function BookBlock({
   closing,
   onActivate,
   onPickNow,
+  onToggle,
   onShelved,
   delay = 0,
   hoverFlag = false,
   reduce = false,
+  stackLayout = false,
 }) {
   const id = bookKey(book);
   const spineWidth = Math.max(Math.round((book.width ?? 34) * 1.35), 46);
   const spineHeight = 250;
   const hoverFlagMeta = HOVER_FLAGS[book.status];
-  const raised = active || closing;
+  const raised = !stackLayout && (active || closing);
   const [scope, animate] = useAnimate();
   const runId = useRef(0);
   const onShelvedRef = useRef(onShelved);
@@ -383,6 +471,8 @@ function BookBlock({
   }, [onShelved]);
 
   useEffect(() => {
+    if (stackLayout) return;
+
     const myRun = ++runId.current;
     let cancelled = false;
 
@@ -434,7 +524,35 @@ function BookBlock({
     return () => {
       cancelled = true;
     };
-  }, [active, closing, reduce, id, animate, scope]);
+  }, [active, closing, reduce, id, animate, scope, stackLayout]);
+
+  const label = `${book.title}${book.author ? ` by ${book.author}` : ''}, ${STATUS_LABEL[book.status]}`;
+
+  if (stackLayout) {
+    return (
+      <li className="library-slot library-slot-stack">
+        <div
+          className={`library-book library-book-stack${book.status === 'reading' ? ' is-reading' : ''}`}
+          style={{
+            '--book': book.displayColor,
+            '--ink': book.ink,
+            animationDelay: `${delay}ms`,
+          }}
+          aria-label={label}
+        >
+          <span className="library-spine library-spine-stack">
+            <span className="library-spine-band" aria-hidden="true" />
+            <span className="library-spine-copy">
+              <span className="library-spine-title">{book.title}</span>
+              {book.author ? <span className="library-spine-author">{book.author}</span> : null}
+            </span>
+            <span className="library-spine-foot" aria-hidden="true" />
+            <span className="library-spine-pages" aria-hidden="true" />
+          </span>
+        </div>
+      </li>
+    );
+  }
 
   return (
     <li className={`library-slot${raised ? ' is-raised' : ''}`}>
@@ -448,9 +566,18 @@ function BookBlock({
           '--book-w': `${spineWidth}px`,
           animationDelay: `${delay}ms`,
         }}
-        aria-label={`${book.title}${book.author ? ` by ${book.author}` : ''}, ${STATUS_LABEL[book.status]}`}
-        onMouseEnter={() => onActivate(id)}
-        onFocus={() => onPickNow(id)}
+        aria-label={label}
+        aria-pressed={onToggle ? active : undefined}
+        onMouseEnter={onActivate ? () => onActivate(id) : undefined}
+        onFocus={onPickNow ? () => onPickNow(id) : undefined}
+        onClick={
+          onToggle
+            ? (e) => {
+                e.preventDefault();
+                onToggle(id);
+              }
+            : undefined
+        }
       >
         <MotionSpan
           ref={scope}
