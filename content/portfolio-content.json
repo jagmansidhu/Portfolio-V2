@@ -7,27 +7,24 @@
     "email": "jagmansidhu1@gmail.com",
     "website": "https://jagmansidhu.com/",
     "tagline": "Software Developer based in Vancouver. Building impactful experiences.",
-    "bio": "3rd year CS Major based in Vancouver. Building to create a net positive impact and mastering the craft of software engineering. Currently a Full-Stack Web Developer using Java, React, Typescript and SQL. Outside of coding, I love reading, weightlifting (225lb bench press), and building new projects.",
+    "bio": "4th year CS Major based in Vancouver. Building to create a net positive impact and mastering the craft of software engineering.",
     "kicker": "University of British Columbia"
   },
-
   "education": [
     {
       "institution": "University of British Columbia",
       "degree": "Bachelor's (Computing Science / CS Major)",
-      "status": "In progress — 3rd year",
+      "status": "In progress — 4th year",
       "location": "Vancouver, BC",
       "notes": "Also completed ECON 398 coursework tied to the OAS labour participation research project."
     }
   ],
-
   "links": {
     "email": "mailto:jagmansidhu1@gmail.com",
     "github": "https://github.com/jagmansidhu",
     "linkedin": "https://linkedin.com/in/jagmans",
     "website": "https://jagmansidhu.com/"
   },
-
   "photos": {
     "hero": {
       "path": "/assets/7464015829964488032.JPG",
@@ -59,7 +56,6 @@
       "note": "Referenced in meta tags; file may be missing from assets."
     }
   },
-
   "projectScreenshots": {
     "mensMentalHealth": {
       "path": "/assets/MensMentalHealthWeb.png",
@@ -72,7 +68,6 @@
       "relatedTo": "TheRoommate"
     }
   },
-
   "documents": {
     "oasPaper": {
       "path": "/assets/papers/oas-labour-participation.pdf",
@@ -80,15 +75,45 @@
       "relatedTo": "Does OAS cause a decline in labour participation rates?"
     }
   },
-
   "skills": {
-    "languages": ["Java", "TypeScript", "C++", "C", "SQL", "HTML/CSS"],
-    "frameworks": ["Spring Boot", "Spring Security", "React", "Next.js", "Tailwind CSS"],
-    "databasesAndSecurity": ["PostgreSQL", "JWT", "OAuth 2.0", "REST APIs", "WebSocket"],
-    "cloudAndDevops": ["AWS (EC2, S3, RDS)", "Docker", "GitHub Actions", "Linux", "Git"],
-    "tools": ["Jira", "Postman", "Maven", "JUnit", "Chai", "Railway"]
+    "languages": [
+      "Java",
+      "TypeScript",
+      "C++",
+      "C",
+      "SQL",
+      "HTML/CSS"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "Spring Security",
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "databasesAndSecurity": [
+      "PostgreSQL",
+      "JWT",
+      "OAuth 2.0",
+      "REST APIs",
+      "WebSocket"
+    ],
+    "cloudAndDevops": [
+      "AWS (EC2, S3, RDS)",
+      "Docker",
+      "GitHub Actions",
+      "Linux",
+      "Git"
+    ],
+    "tools": [
+      "Jira",
+      "Postman",
+      "Maven",
+      "JUnit",
+      "Chai",
+      "Railway"
+    ]
   },
-
   "experience": [
     {
       "role": "Software Developer",
@@ -98,7 +123,14 @@
       "desc": [
         "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
       ],
-      "tech": ["Spring Boot", "Next.js", "PostgreSQL", "REST APIs", "Java", "TypeScript"],
+      "tech": [
+        "Spring Boot",
+        "Next.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Java",
+        "TypeScript"
+      ],
       "projectLink": "https://ubcmmhc.com/",
       "githubLink": "https://github.com/UBC-MMHC",
       "screenshot": "/assets/MensMentalHealthWeb.png"
@@ -111,10 +143,15 @@
       "desc": [
         "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
       ],
-      "tech": ["Windows", "macOS", "Linux", "PowerShell", "Bash"]
+      "tech": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "PowerShell",
+        "Bash"
+      ]
     }
   ],
-
   "projects": [
     {
       "title": "UBC-Newcomers",
@@ -124,7 +161,14 @@
       "desc": [
         "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
       ],
-      "tech": ["TypeScript", "AWS ECS", "Amazon Cognito", "AWS Bedrock", "Amazon S3", "Claude"],
+      "tech": [
+        "TypeScript",
+        "AWS ECS",
+        "Amazon Cognito",
+        "AWS Bedrock",
+        "Amazon S3",
+        "Claude"
+      ],
       "githubLink": "https://github.com/wtarit/UBC-Newcomers",
       "linkedinLink": "https://www.linkedin.com/posts/ubc-cic_ubc-generativeai-hackathon-activity-7464827663828803585-sK7Y"
     },
@@ -135,7 +179,15 @@
       "desc": [
         "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
       ],
-      "tech": ["Spring Boot", "React", "TypeScript", "PostgreSQL", "Docker", "WebSocket", "Railway"],
+      "tech": [
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "WebSocket",
+        "Railway"
+      ],
       "projectLink": "https://theroommate-production.up.railway.app/",
       "githubLink": "https://github.com/jagmansidhu/DaRoommate",
       "screenshot": "/assets/TheRoommateWeb.png"
@@ -147,7 +199,11 @@
       "desc": [
         "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
       ],
-      "tech": ["Next.js", "TypeScript", "Gemini API"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Gemini API"
+      ],
       "githubLink": "https://github.com/jagmansidhu/nodify"
     },
     {
@@ -157,11 +213,15 @@
       "desc": [
         "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
       ],
-      "tech": ["Python", "Transformers", "Pandas", "NumPy"],
+      "tech": [
+        "Python",
+        "Transformers",
+        "Pandas",
+        "NumPy"
+      ],
       "githubLink": "https://github.com/jagmansidhu/Lumina"
     }
   ],
-
   "featured": [
     {
       "title": "Men's Mental Health Club",
@@ -176,7 +236,6 @@
       "type": "HOUSING MANAGEMENT"
     }
   ],
-
   "dataProjects": [
     {
       "title": "F1 Data Visualization",
@@ -185,7 +244,11 @@
       "desc": [
         "Visualized Kaggle F1 race data (1950–2020) in Power BI after cleaning with Power Query."
       ],
-      "tech": ["Power BI", "Power Query", "Kaggle"],
+      "tech": [
+        "Power BI",
+        "Power Query",
+        "Kaggle"
+      ],
       "githubLink": "https://github.com/jagmansidhu/Data_Visualization_F1"
     },
     {
@@ -195,12 +258,15 @@
       "desc": [
         "Tested whether Old Age Security affects labour force participation using a differences-in-differences model with age eligibility, gender, income, and education controls. Found insignificant evidence that OAS affects participation."
       ],
-      "tech": ["R", "Difference-in-Differences", "Canada Census 2022"],
+      "tech": [
+        "R",
+        "Difference-in-Differences",
+        "Canada Census 2022"
+      ],
       "githubLink": "https://github.com/jagmansidhu/OAS_Analysis_398",
       "paperLink": "/assets/papers/oas-labour-participation.pdf"
     }
   ],
-
   "seo": {
     "title": "Jagman Sidhu",
     "description": "Jagman Sidhu - Software Engineer Portfolio. Computing Science at UBC.",
@@ -208,7 +274,6 @@
     "ogDescription": "Software Developer based in Vancouver. Building impactful experiences.",
     "ogImage": "/assets/og-preview.png"
   },
-
   "assetInventory": {
     "keptInPublic": [
       "public/assets/7464015829964488032.JPG",
@@ -238,5 +303,336 @@
       "grid-top-right.svg"
     ],
     "note": "Photos, screenshots, favicon, and the OAS paper were kept under public/. Decorative SVG icons and styles.css were removed with the old UI."
-  }
+  },
+  "books": [
+    {
+      "spineColor": "#1F3A5F",
+      "textColor": "#F4F0E8",
+      "height": 170,
+      "width": 24,
+      "rating": 0,
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "status": "reading",
+      "isbn": "9781451626650",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781451626650-L.jpg"
+    },
+    {
+      "spineColor": "#C4785A",
+      "textColor": "#FFF8F2",
+      "height": 177,
+      "width": 27,
+      "rating": 0,
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "status": "read",
+      "isbn": "9780140280195",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140280195-L.jpg"
+    },
+    {
+      "spineColor": "#F0D9A8",
+      "textColor": "#2A2418",
+      "height": 184,
+      "width": 30,
+      "rating": 0,
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "status": "read",
+      "isbn": "9781612680194",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg"
+    },
+    {
+      "spineColor": "#3D6B58",
+      "textColor": "#E8F2EC",
+      "height": 191,
+      "width": 33,
+      "rating": 0,
+      "title": "Shoe Dog",
+      "author": "Phil Knight",
+      "status": "read",
+      "isbn": "9781501135910",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781501135910-L.jpg"
+    },
+    {
+      "spineColor": "#E8E4D9",
+      "textColor": "#1C1714",
+      "height": 198,
+      "width": 36,
+      "rating": 0,
+      "title": "The Magic of Thinking Big",
+      "author": "David J. Schwartz",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9780671649913",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780671649913-L.jpg"
+    },
+    {
+      "spineColor": "#2C2C2C",
+      "textColor": "#F2F2F2",
+      "height": 205,
+      "width": 25,
+      "rating": 0,
+      "title": "Beneath a Scarlet Sky",
+      "author": "Mark Sullivan",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9781503943377",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781503943377-L.jpg"
+    },
+    {
+      "spineColor": "#C45C26",
+      "textColor": "#FFF5EE",
+      "height": 172,
+      "width": 28,
+      "rating": 0,
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9780671027032",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg"
+    },
+    {
+      "spineColor": "#C4A35A",
+      "textColor": "#1C1714",
+      "height": 179,
+      "width": 31,
+      "rating": 0,
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9780525559474",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg"
+    },
+    {
+      "spineColor": "#5B7C99",
+      "textColor": "#F4F7FA",
+      "height": 186,
+      "width": 34,
+      "rating": 0,
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9781590302255",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781590302255-L.jpg"
+    },
+    {
+      "spineColor": "#8B3A4A",
+      "textColor": "#FFEDEA",
+      "height": 193,
+      "width": 37,
+      "rating": 0,
+      "title": "How to Win at the Sport of Business",
+      "author": "Mark Cuban",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780349410470",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780349410470-L.jpg"
+    },
+    {
+      "spineColor": "#E8B86D",
+      "textColor": "#2A1F14",
+      "height": 200,
+      "width": 26,
+      "rating": 0,
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780857197689",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg"
+    },
+    {
+      "spineColor": "#4A5D4E",
+      "textColor": "#EAF2EC",
+      "height": 207,
+      "width": 29,
+      "rating": 0,
+      "title": "Read People Like a Book",
+      "author": "Patrick King",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9781647432508",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781647432508-L.jpg"
+    },
+    {
+      "spineColor": "#6B4E71",
+      "textColor": "#F7EFF8",
+      "height": 174,
+      "width": 32,
+      "rating": 0,
+      "title": "1984",
+      "author": "George Orwell",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780451524935",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+    },
+    {
+      "spineColor": "#2F5D4A",
+      "textColor": "#E8F5EE",
+      "height": 181,
+      "width": 35,
+      "rating": 0,
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780451526342",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451526342-L.jpg"
+    },
+    {
+      "spineColor": "#8B4513",
+      "textColor": "#F5E6D3",
+      "height": 188,
+      "width": 24,
+      "rating": 0,
+      "title": "Unscripted",
+      "author": "MJ DeMarco",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780987511034",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780987511034-L.jpg"
+    },
+    {
+      "spineColor": "#1A1A2E",
+      "textColor": "#EAEAEA",
+      "height": 195,
+      "width": 27,
+      "rating": 0,
+      "title": "The Log of a Cowboy",
+      "author": "Andy Adams",
+      "status": "read",
+      "year": 2024,
+      "isbn": "9780143039686",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780143039686-L.jpg"
+    },
+    {
+      "spineColor": "#4A3728",
+      "textColor": "#F0E6D8",
+      "height": 202,
+      "width": 30,
+      "rating": 0,
+      "title": "The Paradox of Choice",
+      "author": "Barry Schwartz",
+      "status": "read",
+      "year": 2025,
+      "isbn": "9780060005689",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780060005689-L.jpg"
+    },
+    {
+      "spineColor": "#7A1F2B",
+      "textColor": "#FFE8EB",
+      "height": 209,
+      "width": 33,
+      "rating": 0,
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "status": "read",
+      "year": 2025,
+      "isbn": "9780140449266",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140449266-L.jpg"
+    },
+    {
+      "spineColor": "#3E5641",
+      "textColor": "#E7F0E8",
+      "height": 176,
+      "width": 36,
+      "rating": 0,
+      "title": "Atlas Shrugged",
+      "author": "Ayn Rand",
+      "status": "read",
+      "year": 2026,
+      "isbn": "9780451191144",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451191144-L.jpg"
+    },
+    {
+      "spineColor": "#B8860B",
+      "textColor": "#1C1714",
+      "height": 183,
+      "width": 25,
+      "rating": 0,
+      "title": "The Four Agreements",
+      "author": "Don Miguel Ruiz",
+      "status": "read",
+      "year": 2026,
+      "isbn": "9781878424310",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781878424310-L.jpg"
+    },
+    {
+      "spineColor": "#2E4057",
+      "textColor": "#E8EEF5",
+      "height": 190,
+      "width": 28,
+      "rating": 0,
+      "title": "The Little Book of Common Sense Investing",
+      "author": "John C. Bogle",
+      "status": "want",
+      "isbn": "9781119404507",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781119404507-L.jpg"
+    },
+    {
+      "spineColor": "#5C4033",
+      "textColor": "#F5EDE4",
+      "height": 197,
+      "width": 31,
+      "rating": 0,
+      "title": "Margin of Safety",
+      "author": "Seth Klarman",
+      "status": "want",
+      "isbn": "9780887305108",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780887305108-L.jpg"
+    },
+    {
+      "spineColor": "#0F4C5C",
+      "textColor": "#E6F4F5",
+      "height": 204,
+      "width": 34,
+      "rating": 0,
+      "title": "The Lessons of History",
+      "author": "Will & Ariel Durant",
+      "status": "want",
+      "isbn": "9781439149959",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781439149959-L.jpg"
+    },
+    {
+      "spineColor": "#6B2D5C",
+      "textColor": "#F8EAF4",
+      "height": 171,
+      "width": 37,
+      "rating": 0,
+      "title": "The War of the Worlds",
+      "author": "H.G. Wells",
+      "status": "want",
+      "isbn": "9780241341346",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780241341346-L.jpg"
+    },
+    {
+      "spineColor": "#3D405B",
+      "textColor": "#EEF0F7",
+      "height": 178,
+      "width": 26,
+      "rating": 0,
+      "title": "The Iliad",
+      "author": "Homer",
+      "status": "want",
+      "isbn": "9780140275368",
+      "note": "Listed with The Odyssey",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140275368-L.jpg"
+    },
+    {
+      "spineColor": "#BC6C25",
+      "textColor": "#FFF5E8",
+      "height": 185,
+      "width": 29,
+      "rating": 0,
+      "title": "The Odyssey",
+      "author": "Homer",
+      "status": "want",
+      "isbn": "9780140268867",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140268867-L.jpg"
+    }
+  ]
 }
