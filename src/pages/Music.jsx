@@ -26,11 +26,15 @@ export default function Music() {
   const [loading, setLoading] = useState(false);
   const [playError, setPlayError] = useState(null);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [queuePos, setQueuePos] = useState(0);
+  const [queueLen, setQueueLen] = useState(0);
   const audioRef = useRef(null);
   const queuePosRef = useRef(0);
   const queueRef = useRef([]);
 
   const canPlayTop = tracks.some((t) => t.deezerId);
+  const canPrev = playing && queuePos > 0;
+  const canNext = playing && queuePos < queueLen - 1;
 
   useEffect(
     () => () => {
@@ -48,6 +52,8 @@ export default function Music() {
     }
     setPlaying(false);
     setActiveIndex(-1);
+    setQueuePos(0);
+    setQueueLen(0);
     queueRef.current = [];
     queuePosRef.current = 0;
   };
@@ -61,6 +67,7 @@ export default function Music() {
     }
     const track = queue[pos];
     queuePosRef.current = pos;
+    setQueuePos(pos);
     setActiveIndex(track.index);
     setPlaying(true);
     audio.src = track.preview;
@@ -100,12 +107,23 @@ export default function Music() {
       }
 
       queueRef.current = queue;
+      setQueueLen(queue.length);
       playQueueAt(0);
     } catch {
       setPlayError("Couldn't load previews. Try again.");
     } finally {
       setLoading(false);
     }
+  };
+
+  const skipPrev = () => {
+    if (!canPrev) return;
+    playQueueAt(queuePosRef.current - 1);
+  };
+
+  const skipNext = () => {
+    if (!canNext) return;
+    playQueueAt(queuePosRef.current + 1);
   };
 
   const toggleTopPlay = () => {
@@ -130,15 +148,39 @@ export default function Music() {
         <h1 className="listening-title">On repeat.</h1>
         {canPlayTop ? (
           <div className="listening-play-wrap">
-            <button
-              type="button"
-              className="listening-play"
-              onClick={toggleTopPlay}
-              disabled={loading}
-              aria-busy={loading}
-            >
-              {playing ? 'pause' : loading ? 'loading…' : 'play top'}
-            </button>
+            <div className="listening-play-row" role="group" aria-label="Preview playback">
+              {playing ? (
+                <button
+                  type="button"
+                  className="listening-skip"
+                  onClick={skipPrev}
+                  disabled={!canPrev}
+                  aria-label="Previous track"
+                >
+                  prev
+                </button>
+              ) : null}
+              <button
+                type="button"
+                className="listening-play"
+                onClick={toggleTopPlay}
+                disabled={loading}
+                aria-busy={loading}
+              >
+                {playing ? 'stop' : loading ? 'loading…' : 'play top'}
+              </button>
+              {playing ? (
+                <button
+                  type="button"
+                  className="listening-skip"
+                  onClick={skipNext}
+                  disabled={!canNext}
+                  aria-label="Next track"
+                >
+                  next
+                </button>
+              ) : null}
+            </div>
             {playError ? <p className="listening-play-error">{playError}</p> : null}
           </div>
         ) : null}
