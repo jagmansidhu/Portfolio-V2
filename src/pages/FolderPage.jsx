@@ -5,6 +5,11 @@ import { FolderIcon } from '../components/Icons';
 const MotionDiv = motion.div;
 
 export default function FolderPage({ title, kicker, nested = [], children }) {
+  const reduce =
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   return (
     <main className="folder-page">
       <header className="folder-page-header">
@@ -22,9 +27,9 @@ export default function FolderPage({ title, kicker, nested = [], children }) {
 
       <MotionDiv
         className="folder-page-body"
-        initial={{ opacity: 0, y: 10 }}
+        initial={reduce ? false : { opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
+        transition={reduce ? { duration: 0 } : { duration: 0.4, ease: 'easeOut' }}
       >
         {children}
         {nested.length > 0 && (
