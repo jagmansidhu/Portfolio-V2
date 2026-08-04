@@ -40,7 +40,9 @@ export default function DesktopFile({
           {inner}
         </a>
       ) : (
-        <div className="desktop-file">{inner}</div>
+        <div className="desktop-file" style={{ cursor: 'default' }}>
+          {inner}
+        </div>
       )}
     </MotionDiv>
   );
