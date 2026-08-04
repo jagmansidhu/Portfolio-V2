@@ -61,9 +61,7 @@ const MUTED_SPINES = [
 export default function Books() {
   const reduce = useReducedMotion();
   const isMobile = useIsMobile();
-  const [view, setView] = useState(() =>
-    typeof window !== 'undefined' && window.matchMedia(MOBILE_MQ).matches ? 'list' : 'shelves'
-  );
+  const [view, setView] = useState('shelves');
   const [activeId, setActiveId] = useState(null);
   const [closingId, setClosingId] = useState(null);
   const hoverTimer = useRef(null);

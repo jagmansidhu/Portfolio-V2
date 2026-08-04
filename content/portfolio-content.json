@@ -7,14 +7,14 @@
     "email": "jagmansidhu1@gmail.com",
     "website": "https://jagmansidhu.com/",
     "tagline": "Software Developer based in Vancouver. Building impactful experiences.",
-    "bio": "4th year CS Major based in Vancouver. Building to create a net positive impact and mastering the craft of software engineering.",
+    "bio": "4th year CS Major based in Vancouver. Building to create a net positive impact through mastering the craft of software engineering.",
     "kicker": "University of British Columbia"
   },
   "education": [
     {
       "institution": "University of British Columbia",
       "degree": "Bachelor's (Computing Science / CS Major)",
-      "status": "In progress \u2014 4th year",
+      "status": "In progress — 4th year",
       "location": "Vancouver, BC",
       "notes": "Also completed ECON 398 coursework tied to the OAS labour participation research project."
     }
@@ -118,7 +118,7 @@
     {
       "role": "Software Developer",
       "company": "UBC Men's Mental Health Club",
-      "subtitle": "Sept 2025 \u2013 Present",
+      "subtitle": "Sept 2025 – Present",
       "location": "Vancouver, BC",
       "desc": [
         "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
@@ -138,7 +138,7 @@
     {
       "role": "IT Support Specialist",
       "company": "SSL Computers",
-      "subtitle": "Jan 2023 \u2013 Jun 2023",
+      "subtitle": "Jan 2023 – Jun 2023",
       "location": "Calgary, AB",
       "desc": [
         "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
@@ -155,11 +155,11 @@
   "projects": [
     {
       "title": "UBC-Newcomers",
-      "subtitle": "May 2026 \u00b7 ",
-      "subtitleBold": "UBC CIC \u00d7 AWS Hackathon Winner",
+      "subtitle": "May 2026 · ",
+      "subtitleBold": "UBC CIC × AWS Hackathon Winner",
       "tagline": "Campus connection app for transfer, international, and first-year students",
       "desc": [
-        "Won the UBC CIC \u00d7 AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
+        "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
       ],
       "tech": [
         "TypeScript",
@@ -174,7 +174,7 @@
     },
     {
       "title": "TheRoommate",
-      "subtitle": "Aug 2025 \u2013 Present",
+      "subtitle": "Aug 2025 – Present",
       "tagline": "Housing app for roommates and landlords",
       "desc": [
         "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
@@ -194,7 +194,7 @@
     },
     {
       "title": "Nodify",
-      "subtitle": "Jan 2026 \u00b7 nwHacks",
+      "subtitle": "Jan 2026 · nwHacks",
       "tagline": "Email urgency scoring and trend dashboards with Gemini",
       "desc": [
         "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
@@ -208,7 +208,7 @@
     },
     {
       "title": "Lumina",
-      "subtitle": "Jun 2025 \u2013 Aug 2025",
+      "subtitle": "Jun 2025 – Aug 2025",
       "tagline": "Sentiment and intent classification from user text",
       "desc": [
         "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
@@ -242,7 +242,7 @@
       "subtitle": "Data Visualization",
       "tagline": "Formula 1 championship data from 1950 to 2020",
       "desc": [
-        "Visualized Kaggle F1 race data (1950\u20132020) in Power BI after cleaning with Power Query."
+        "Visualized Kaggle F1 race data (1950–2020) in Power BI after cleaning with Power Query."
       ],
       "tech": [
         "Power BI",
@@ -636,7 +636,103 @@
     }
   ],
   "music": {
-    "tracks": [],
-    "artists": []
+    "tracks": [
+      {
+        "title": "Pathos (Live at the Royal Albert Hall)",
+        "artist": "Ludovico Einaudi",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/57b095ef7c5cde55c7fb016ec4ce6301/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/9/3/0/e93f0ab4447384ca95821189a8e9714b.mp3?hdnea=exp=1785885383~acl=/api/1/1/e/9/3/0/e93f0ab4447384ca95821189a8e9714b.mp3*~data=user_id=0,application_id=42~hmac=98a90b1881fecc38977f18425a9195564eae64fb35f30c98452c48761881459c",
+        "link": "https://open.spotify.com/search/Pathos%20%28Live%20at%20the%20Royal%20Albert%20Hall%29%20Ludovico%20Einaudi",
+        "album": "Pathos (Live at the Royal Albert Hall)"
+      },
+      {
+        "title": "Stillness & Solace",
+        "artist": "FableForte",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/8bce34de4569654df9a873509ee95add/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/2/5/7/0/257c9b1cda4061e5b9644421cbe6140b.mp3?hdnea=exp=1785885379~acl=/api/1/1/2/5/7/0/257c9b1cda4061e5b9644421cbe6140b.mp3*~data=user_id=0,application_id=42~hmac=804dd97485e500eb6bcf79b635d143b163f0f28241e798fdceeeacc7dcd12664",
+        "link": "https://open.spotify.com/search/Stillness%20%26%20Solace%20FableForte",
+        "album": "Stillness & Solace"
+      },
+      {
+        "title": "Solace",
+        "artist": "Txmy",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/95f18500a68fc9be7bec11f1fe7d4183/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/d/c/5/0/dc51d9b14a488e292a7d5d2476a72345.mp3?hdnea=exp=1785885379~acl=/api/1/1/d/c/5/0/dc51d9b14a488e292a7d5d2476a72345.mp3*~data=user_id=0,application_id=42~hmac=2ec93385c0df2b88f404e4ffc0a1ab824ce435b61a1ab9223fcb7b9e8bc217ef",
+        "link": "https://open.spotify.com/search/Solace%20Txmy",
+        "album": "Solace"
+      },
+      {
+        "title": "Blissful",
+        "artist": "Txmy",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/57ea143fb8a3df262363b21ea914c122/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/9/4/d/0/94d8e0b9aed7864aff78346db9d0e3ef.mp3?hdnea=exp=1785885380~acl=/api/1/1/9/4/d/0/94d8e0b9aed7864aff78346db9d0e3ef.mp3*~data=user_id=0,application_id=42~hmac=272d6df4625872ae8b6ea7d180e4976d1d93b6a2104584eb3c80a81db3bbbc01",
+        "link": "https://open.spotify.com/search/Blissful%20Txmy",
+        "album": "Late Nights"
+      },
+      {
+        "title": "Nacar (feat. Nathan Ball)",
+        "artist": "Parra for Cuva",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/6fbdeceefd91a249466dc889abe640b1/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/c/b/e/0/cbea56d03d57e94c100ce22471d2c114.mp3?hdnea=exp=1785885380~acl=/api/1/1/c/b/e/0/cbea56d03d57e94c100ce22471d2c114.mp3*~data=user_id=0,application_id=42~hmac=c93135722aacd24670a065588c7a1e6c4b73061aa6a9f0fd5a1b95a884a243ac",
+        "link": "https://open.spotify.com/search/Nacar%20%28feat.%20Nathan%20Ball%29%20Parra%20for%20Cuva",
+        "album": "Nacar"
+      },
+      {
+        "title": "Don't Go",
+        "artist": "Christopher Dennis Coleman",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/639f6dc4d68b92572ac2abab71e3663d/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/5/3/1/0/5314c2b0653319e4c28cb30906d2778e.mp3?hdnea=exp=1785885381~acl=/api/1/1/5/3/1/0/5314c2b0653319e4c28cb30906d2778e.mp3*~data=user_id=0,application_id=42~hmac=c6c553d27965f79a16e2408c037fd8dd2e0728a7651fdd460bbcaa836a5c8685",
+        "link": "https://open.spotify.com/search/Don%27t%20Go%20Christopher%20Dennis%20Coleman",
+        "album": "Don't Go"
+      },
+      {
+        "title": "Onwards",
+        "artist": "Dylan John Sparkes",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/4a6fe40a8f938270923cdf2cf2d307b8/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/6/c/d/0/6cda066613c9d35c0ee0b181a185282d.mp3?hdnea=exp=1785885381~acl=/api/1/1/6/c/d/0/6cda066613c9d35c0ee0b181a185282d.mp3*~data=user_id=0,application_id=42~hmac=e5f34b45868a2456d338eb1c59abc3aad59828e0455460c4c4adb7493aa438d9",
+        "link": "https://open.spotify.com/search/Onwards%20Dylan%20John%20Sparkes",
+        "album": "Vibrations Of Love"
+      },
+      {
+        "title": "Golden Brown",
+        "artist": "Dramatica",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/bbf8318008691a08531f913497428b97/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/8/a/0/e8a7d3c93e837947054ee312c5b7dbee.mp3?hdnea=exp=1785885382~acl=/api/1/1/e/8/a/0/e8a7d3c93e837947054ee312c5b7dbee.mp3*~data=user_id=0,application_id=42~hmac=41348b5899fe23ae6f5a4aee6e97ed3aacbe0d01040cf43f7436f6ecc365b904",
+        "link": "https://open.spotify.com/search/Golden%20Brown%20Dramatica",
+        "album": "Golden Brown"
+      },
+      {
+        "title": "The Ghost in Your Smile",
+        "artist": "Les Très",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/61e06c660dab7fa60cff30e5b41d58b5/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/4/4/4/0/444b8dde8880b67344f7b76c27187644.mp3?hdnea=exp=1785885382~acl=/api/1/1/4/4/4/0/444b8dde8880b67344f7b76c27187644.mp3*~data=user_id=0,application_id=42~hmac=f9b6196752f22b77631dbb852d500e5d323d6f64bb43e7f4e92e31f76b1d6ccc",
+        "link": "https://open.spotify.com/search/The%20Ghost%20in%20Your%20Smile%20Les%20Tr%C3%A8s",
+        "album": "Les Très"
+      },
+      {
+        "title": "FOREVER",
+        "artist": "OAFF & Pratika Gopinath",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/143f33e8db79922d32a994cdf85fc98e/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/c/4/0/ec4eebaf2558316b268a892028e8e619.mp3?hdnea=exp=1785885383~acl=/api/1/1/e/c/4/0/ec4eebaf2558316b268a892028e8e619.mp3*~data=user_id=0,application_id=42~hmac=8bbd9ad8703110ca093c89e3b876af116c4e3bf38de476439e2f764516137d86",
+        "link": "https://open.spotify.com/search/FOREVER%20OAFF%20%26%20Pratika%20Gopinath",
+        "album": "Between Flowers"
+      },
+      {
+        "title": "Jind Mahi (Remix)",
+        "artist": "Mastane, Raaginder, DJ Sudi & Malkit Singh",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/c5734b387ee94b1043fc80d0368f4d16/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/1/0/18160f9867724fa363deb11a1e96417d.mp3?hdnea=exp=1785885386~acl=/api/1/1/1/8/1/0/18160f9867724fa363deb11a1e96417d.mp3*~data=user_id=0,application_id=42~hmac=4e5aac74c4586e9892c04f5e2353e0284f1b2ebfa26f800889b90add22c1b645",
+        "link": "https://open.spotify.com/search/Jind%20Mahi%20%28Remix%29%20Mastane%2C%20Raaginder%2C%20DJ%20Sudi%20%26%20Malkit%20Singh",
+        "album": "Jind Mahi"
+      },
+      {
+        "title": "Symphony No. 6 in F Major, Op. 68 \"Pastoral\"",
+        "artist": "Berliner Philharmoniker & Herbert von Karajan",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/a03b4bbb48523dedddd7f92f856d0972/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/c/4/7/0/c475881b72f8d1f867a44a15ebb435d2.mp3?hdnea=exp=1785885387~acl=/api/1/1/c/4/7/0/c475881b72f8d1f867a44a15ebb435d2.mp3*~data=user_id=0,application_id=42~hmac=ae5d669f74ce985acbd27b192996c66800df07eff2af71db61c97abd1cf192b6",
+        "link": "https://open.spotify.com/search/Symphony%20No.%206%20in%20F%20Major%2C%20Op.%2068%20%22Pastoral%22%20Berliner%20Philharmoniker%20%26%20Herbert%20von%20Karajan",
+        "album": "Beethoven: The 9 Symphonies"
+      }
+    ]
   }
 }

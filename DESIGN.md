@@ -28,11 +28,11 @@ Brand: *jagman* (Cormorant italic) with a short bio underneath. No hero “portf
 ### Color
 
 ```css
---bg: #EBE6DE;
---ink: #1C1714;
---ink-soft: #6A6158;
---accent: #5B9EC9;
---folder-face / tab / shade: Finder blues;
+--bg / wall: #e0d8cf → #d2c8bc → #bfb3a5; /* stone brown */
+--ink: #1B1815;
+--ink-soft: #6A635C;
+--accent: #4F6D73; /* graphite teal */
+--folder-face / tab / shade: muted slate blues;
 ```
 
 ### Type
@@ -62,10 +62,10 @@ Wooden shelves on a warm wall (inspiration brief). Two bays:
 ### Tokens
 
 ```css
---wall: #e7dfd2;
---wood: #3a2f28;
---ink: #2a241c;
---tag: #f7f1e8; /* paper flag on hover */
+--wall: #d2c8bc;
+--wood: #332b26;
+--ink: #1b1815;
+--tag: #ebe4db; /* paper flag on hover */
 ```
 
 Hover flags are small paper tags (slight rotate), not rounded-full pills.

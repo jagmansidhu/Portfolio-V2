@@ -17,7 +17,7 @@ export default function DesktopFolder({ label, to, style, delay = 0, rotate = 0 
     >
       <Link to={to} className="desktop-folder">
         <span className="desktop-icon-tilt">
-          <FolderIcon size={108} />
+          <FolderIcon size={164} />
         </span>
         <span className="desktop-label">{label}</span>
       </Link>
