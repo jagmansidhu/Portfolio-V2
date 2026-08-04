@@ -7,7 +7,7 @@
     "email": "jagmansidhu1@gmail.com",
     "website": "https://jagmansidhu.com/",
     "tagline": "Software Developer based in Vancouver. Building impactful experiences.",
-    "bio": "4th year CS Major based in Vancouver. Building to create a net positive impact through mastering the craft of software engineering.",
+    "bio": "4th year CS Major based in Vancouver — incoming at Providence Health Care. Building to create a net positive impact through mastering the craft of software engineering.",
     "kicker": "University of British Columbia"
   },
   "education": [
@@ -115,6 +115,15 @@
     ]
   },
   "experience": [
+    {
+      "role": "Clinical Research Assistant",
+      "company": "Providence Health Care",
+      "subtitle": "Incoming",
+      "location": "Vancouver, BC",
+      "desc": [
+        "Incoming role supporting clinical research through data management and day-to-day operations."
+      ]
+    },
     {
       "role": "Software Developer",
       "company": "UBC Men's Mental Health Club",
