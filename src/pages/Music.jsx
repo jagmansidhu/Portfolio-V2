@@ -7,15 +7,30 @@ import './Music.css';
 const MotionDiv = motion.div;
 const TOP_PLAY_COUNT = 5;
 
+async function fetchFreshPreviews(ids) {
+  const res = await fetch('/api/deezer-previews', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ids }),
+  });
+  if (!res.ok) throw new Error('preview resolve failed');
+  const data = await res.json();
+  return Array.isArray(data.previews) ? data.previews : [];
+}
+
 export default function Music() {
   const reduce = useReducedMotion();
   const tracks = (content.music?.tracks ?? []).filter((t) => t.cover && t.link);
   const [hoveredId, setHoveredId] = useState(null);
   const [playing, setPlaying] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [playError, setPlayError] = useState(null);
   const [activeIndex, setActiveIndex] = useState(-1);
   const audioRef = useRef(null);
   const queuePosRef = useRef(0);
   const queueRef = useRef([]);
+
+  const canPlayTop = tracks.some((t) => t.deezerId);
 
   useEffect(
     () => () => {
@@ -49,31 +64,53 @@ export default function Music() {
     setActiveIndex(track.index);
     setPlaying(true);
     audio.src = track.preview;
-    audio.play().catch(() => stopPlayback());
+    audio.play().catch(() => {
+      // Skip dead/unavailable previews and continue the queue.
+      playQueueAt(pos + 1);
+    });
   };
 
-  const startTopPlay = () => {
-    const queue = tracks
+  const startTopPlay = async () => {
+    const candidates = tracks
       .map((t, index) => ({ ...t, index }))
-      .filter((t) => t.preview)
+      .filter((t) => t.deezerId)
       .slice(0, TOP_PLAY_COUNT);
 
-    if (queue.length === 0) return;
+    if (candidates.length === 0) return;
 
-    if (!audioRef.current) {
-      audioRef.current = new Audio();
-      audioRef.current.addEventListener('ended', () => {
-        playQueueAt(queuePosRef.current + 1);
-      });
+    setPlayError(null);
+    setLoading(true);
+
+    try {
+      const previews = await fetchFreshPreviews(candidates.map((t) => t.deezerId));
+      const queue = candidates
+        .map((t, i) => ({ ...t, preview: previews[i] }))
+        .filter((t) => t.preview);
+
+      if (queue.length === 0) {
+        setPlayError('No previews available right now.');
+        return;
+      }
+
+      if (!audioRef.current) {
+        audioRef.current = new Audio();
+        audioRef.current.addEventListener('ended', () => {
+          playQueueAt(queuePosRef.current + 1);
+        });
+      }
+
+      queueRef.current = queue;
+      playQueueAt(0);
+    } catch {
+      setPlayError("Couldn't load previews. Try again.");
+    } finally {
+      setLoading(false);
     }
-
-    queueRef.current = queue;
-    playQueueAt(0);
   };
 
   const toggleTopPlay = () => {
     if (playing) stopPlayback();
-    else startTopPlay();
+    else if (!loading) startTopPlay();
   };
 
   return (
@@ -91,10 +128,19 @@ export default function Music() {
         transition={reduce ? { duration: 0 } : { duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <h1 className="listening-title">On repeat.</h1>
-        {tracks.some((t) => t.preview) ? (
-          <button type="button" className="listening-play" onClick={toggleTopPlay}>
-            {playing ? 'pause' : 'play top'}
-          </button>
+        {canPlayTop ? (
+          <div className="listening-play-wrap">
+            <button
+              type="button"
+              className="listening-play"
+              onClick={toggleTopPlay}
+              disabled={loading}
+              aria-busy={loading}
+            >
+              {playing ? 'pause' : loading ? 'loading…' : 'play top'}
+            </button>
+            {playError ? <p className="listening-play-error">{playError}</p> : null}
+          </div>
         ) : null}
       </MotionDiv>
 
