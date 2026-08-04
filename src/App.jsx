@@ -1,56 +1,25 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
-import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
+import Desktop from './pages/Desktop';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
+import Books from './pages/Books';
 import Data from './pages/Data';
+import Music from './pages/Music';
 import './index.css';
 
-function ScrollManager() {
-  const { pathname, hash } = useLocation();
-
-  useEffect(() => {
-    if (pathname === '/' && hash) {
-      const id = hash.replace('#', '');
-      requestAnimationFrame(() => {
-        const target = document.getElementById(id);
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-      return;
-    }
-
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
-
-  return null;
-}
-
-function App() {
+export default function App() {
   return (
-    <div className="app-container">
-      <ScrollManager />
-      <Sidebar />
-
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Desktop />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/books" element={<Books />} />
         <Route path="/data" element={<Data />} />
+        <Route path="/music" element={<Music />} />
       </Routes>
-
-      <footer style={{ borderTop: '1px solid var(--surface-slate)', padding: '4rem 2rem', textAlign: 'center' }}>
-        <p className="mono-label text-muted" style={{ fontSize: '12px' }}>© 2026 JAGMAN SIDHU. BUILT WITH REACT.</p>
-      </footer>
       <Analytics />
-    </div>
+    </BrowserRouter>
   );
 }
-
-export default App;

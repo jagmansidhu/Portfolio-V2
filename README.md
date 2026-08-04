@@ -1,16 +1,22 @@
-# React + Vite
+# Portfolio V2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for Jagman Sidhu.
 
-Currently, two official plugins are available:
+## Content archive
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+All bio, education, experience, projects, skills, links, and photo paths live in:
 
-## React Compiler
+[`content/portfolio-content.json`](content/portfolio-content.json)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Photos, screenshots, and documents remain under `public/assets/`.
 
-## Expanding the ESLint configuration
+## Credits
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Desktop layout inspired by [PORTFOLIO 2025 | web design & social media design](https://www.behance.net/gallery/239103229/PORTFOLIO-2025-web-design-social-media-design) on Behance.
+
+## Dev
+
+```bash
+npm install
+npm run dev
+```

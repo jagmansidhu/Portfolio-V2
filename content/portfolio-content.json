@@ -1,0 +1,738 @@
+{
+  "person": {
+    "name": "Jagman Sidhu",
+    "shortName": "Jag",
+    "brand": "JAGMAN",
+    "location": "Vancouver, BC",
+    "email": "jagmansidhu1@gmail.com",
+    "website": "https://jagmansidhu.com/",
+    "tagline": "Software Developer based in Vancouver. Building impactful experiences.",
+    "bio": "4th year CS Major based in Vancouver. Building to create a net positive impact through mastering the craft of software engineering.",
+    "kicker": "University of British Columbia"
+  },
+  "education": [
+    {
+      "institution": "University of British Columbia",
+      "degree": "Bachelor's (Computing Science / CS Major)",
+      "status": "In progress — 4th year",
+      "location": "Vancouver, BC",
+      "notes": "Also completed ECON 398 coursework tied to the OAS labour participation research project."
+    }
+  ],
+  "links": {
+    "email": "mailto:jagmansidhu1@gmail.com",
+    "github": "https://github.com/jagmansidhu",
+    "linkedin": "https://linkedin.com/in/jagmans",
+    "website": "https://jagmansidhu.com/"
+  },
+  "photos": {
+    "hero": {
+      "path": "/assets/7464015829964488032.JPG",
+      "alt": "Jagman Sidhu",
+      "file": "public/assets/7464015829964488032.JPG"
+    },
+    "portrait": {
+      "path": "/assets/jag.jpg",
+      "file": "public/assets/jag.jpg"
+    },
+    "webclip": {
+      "path": "/assets/webclip.jpg",
+      "file": "public/assets/webclip.jpg"
+    },
+    "meme": {
+      "path": "/assets/meme.png",
+      "file": "public/assets/meme.png"
+    },
+    "memeoji": {
+      "path": "/assets/memeoji.jpeg",
+      "file": "public/assets/memeoji.jpeg"
+    },
+    "favicon": {
+      "path": "/assets/favicon-32x32.png",
+      "file": "public/assets/favicon-32x32.png"
+    },
+    "ogPreview": {
+      "path": "/assets/og-preview.png",
+      "note": "Referenced in meta tags; file may be missing from assets."
+    }
+  },
+  "projectScreenshots": {
+    "mensMentalHealth": {
+      "path": "/assets/MensMentalHealthWeb.png",
+      "file": "public/assets/MensMentalHealthWeb.png",
+      "relatedTo": "UBC Men's Mental Health Club"
+    },
+    "theRoommate": {
+      "path": "/assets/TheRoommateWeb.png",
+      "file": "public/assets/TheRoommateWeb.png",
+      "relatedTo": "TheRoommate"
+    }
+  },
+  "documents": {
+    "oasPaper": {
+      "path": "/assets/papers/oas-labour-participation.pdf",
+      "file": "public/assets/papers/oas-labour-participation.pdf",
+      "relatedTo": "Does OAS cause a decline in labour participation rates?"
+    }
+  },
+  "skills": {
+    "languages": [
+      "Java",
+      "TypeScript",
+      "C++",
+      "C",
+      "SQL",
+      "HTML/CSS"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "Spring Security",
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "databasesAndSecurity": [
+      "PostgreSQL",
+      "JWT",
+      "OAuth 2.0",
+      "REST APIs",
+      "WebSocket"
+    ],
+    "cloudAndDevops": [
+      "AWS (EC2, S3, RDS)",
+      "Docker",
+      "GitHub Actions",
+      "Linux",
+      "Git"
+    ],
+    "tools": [
+      "Jira",
+      "Postman",
+      "Maven",
+      "JUnit",
+      "Chai",
+      "Railway"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Software Developer",
+      "company": "UBC Men's Mental Health Club",
+      "subtitle": "Sept 2025 – Present",
+      "location": "Vancouver, BC",
+      "desc": [
+        "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
+      ],
+      "tech": [
+        "Spring Boot",
+        "Next.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Java",
+        "TypeScript"
+      ],
+      "projectLink": "https://ubcmmhc.com/",
+      "githubLink": "https://github.com/UBC-MMHC",
+      "screenshot": "/assets/MensMentalHealthWeb.png"
+    },
+    {
+      "role": "IT Support Specialist",
+      "company": "SSL Computers",
+      "subtitle": "Jan 2023 – Jun 2023",
+      "location": "Calgary, AB",
+      "desc": [
+        "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
+      ],
+      "tech": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "PowerShell",
+        "Bash"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "UBC-Newcomers",
+      "subtitle": "May 2026 · ",
+      "subtitleBold": "UBC CIC × AWS Hackathon Winner",
+      "tagline": "Campus connection app for transfer, international, and first-year students",
+      "desc": [
+        "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
+      ],
+      "tech": [
+        "TypeScript",
+        "AWS ECS",
+        "Amazon Cognito",
+        "AWS Bedrock",
+        "Amazon S3",
+        "Claude"
+      ],
+      "githubLink": "https://github.com/wtarit/UBC-Newcomers",
+      "linkedinLink": "https://www.linkedin.com/posts/ubc-cic_ubc-generativeai-hackathon-activity-7464827663828803585-sK7Y"
+    },
+    {
+      "title": "TheRoommate",
+      "subtitle": "Aug 2025 – Present",
+      "tagline": "Housing app for roommates and landlords",
+      "desc": [
+        "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
+      ],
+      "tech": [
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "WebSocket",
+        "Railway"
+      ],
+      "projectLink": "https://theroommate-production.up.railway.app/",
+      "githubLink": "https://github.com/jagmansidhu/DaRoommate",
+      "screenshot": "/assets/TheRoommateWeb.png"
+    },
+    {
+      "title": "Nodify",
+      "subtitle": "Jan 2026 · nwHacks",
+      "tagline": "Email urgency scoring and trend dashboards with Gemini",
+      "desc": [
+        "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
+      ],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Gemini API"
+      ],
+      "githubLink": "https://github.com/jagmansidhu/nodify"
+    },
+    {
+      "title": "Lumina",
+      "subtitle": "Jun 2025 – Aug 2025",
+      "tagline": "Sentiment and intent classification from user text",
+      "desc": [
+        "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
+      ],
+      "tech": [
+        "Python",
+        "Transformers",
+        "Pandas",
+        "NumPy"
+      ],
+      "githubLink": "https://github.com/jagmansidhu/Lumina"
+    }
+  ],
+  "featured": [
+    {
+      "title": "Men's Mental Health Club",
+      "link": "https://ubcmmhc.com/",
+      "image": "/assets/MensMentalHealthWeb.png",
+      "type": "COMMUNITY PLATFORM"
+    },
+    {
+      "title": "TheRoommate",
+      "link": "https://theroommate-production.up.railway.app/",
+      "image": "/assets/TheRoommateWeb.png",
+      "type": "HOUSING MANAGEMENT"
+    }
+  ],
+  "dataProjects": [
+    {
+      "title": "F1 Data Visualization",
+      "subtitle": "Data Visualization",
+      "tagline": "Formula 1 championship data from 1950 to 2020",
+      "desc": [
+        "Visualized Kaggle F1 race data (1950–2020) in Power BI after cleaning with Power Query."
+      ],
+      "tech": [
+        "Power BI",
+        "Power Query",
+        "Kaggle"
+      ],
+      "githubLink": "https://github.com/jagmansidhu/Data_Visualization_F1"
+    },
+    {
+      "title": "Does OAS cause a decline in labour participation rates?",
+      "subtitle": "ECON 398",
+      "tagline": "Difference-in-differences study with 2022 Canada Census data",
+      "desc": [
+        "Tested whether Old Age Security affects labour force participation using a differences-in-differences model with age eligibility, gender, income, and education controls. Found insignificant evidence that OAS affects participation."
+      ],
+      "tech": [
+        "R",
+        "Difference-in-Differences",
+        "Canada Census 2022"
+      ],
+      "githubLink": "https://github.com/jagmansidhu/OAS_Analysis_398",
+      "paperLink": "/assets/papers/oas-labour-participation.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Jagman Sidhu",
+    "description": "Jagman Sidhu - Software Engineer Portfolio. Computing Science at UBC.",
+    "ogTitle": "Jagman Sidhu | Software Engineer",
+    "ogDescription": "Software Developer based in Vancouver. Building impactful experiences.",
+    "ogImage": "/assets/og-preview.png"
+  },
+  "assetInventory": {
+    "keptInPublic": [
+      "public/assets/7464015829964488032.JPG",
+      "public/assets/jag.jpg",
+      "public/assets/webclip.jpg",
+      "public/assets/meme.png",
+      "public/assets/memeoji.jpeg",
+      "public/assets/MensMentalHealthWeb.png",
+      "public/assets/TheRoommateWeb.png",
+      "public/assets/favicon-32x32.png",
+      "public/assets/papers/oas-labour-participation.pdf",
+      "public/favicon.svg",
+      "public/icons.svg"
+    ],
+    "legacyIconsRemovedWithCode": [
+      "gmail.svg",
+      "github.svg",
+      "icons8-linkedin.svg",
+      "home.svg",
+      "menu.svg",
+      "back.svg",
+      "browser.svg",
+      "code.svg",
+      "database.svg",
+      "dns.svg",
+      "favorite.svg",
+      "grid-top-right.svg"
+    ],
+    "note": "Photos, screenshots, favicon, and the OAS paper were kept under public/. Decorative SVG icons and styles.css were removed with the old UI."
+  },
+  "books": [
+    {
+      "spineColor": "#1F3A5F",
+      "textColor": "#F4F0E8",
+      "height": 170,
+      "width": 24,
+      "rating": 0,
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "status": "reading",
+      "isbn": "9781451626650",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781451626650-L.jpg"
+    },
+    {
+      "spineColor": "#C4785A",
+      "textColor": "#FFF8F2",
+      "height": 177,
+      "width": 27,
+      "rating": 0,
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "status": "read",
+      "isbn": "9780140280195",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140280195-L.jpg"
+    },
+    {
+      "spineColor": "#F0D9A8",
+      "textColor": "#2A2418",
+      "height": 184,
+      "width": 30,
+      "rating": 0,
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "status": "read",
+      "isbn": "9781612680194",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg"
+    },
+    {
+      "spineColor": "#3D6B58",
+      "textColor": "#E8F2EC",
+      "height": 191,
+      "width": 33,
+      "rating": 0,
+      "title": "Shoe Dog",
+      "author": "Phil Knight",
+      "status": "read",
+      "isbn": "9781501135910",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781501135910-L.jpg"
+    },
+    {
+      "spineColor": "#E8E4D9",
+      "textColor": "#1C1714",
+      "height": 198,
+      "width": 36,
+      "rating": 0,
+      "title": "The Magic of Thinking Big",
+      "author": "David J. Schwartz",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9781501118210",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781501118210-L.jpg"
+    },
+    {
+      "spineColor": "#2C2C2C",
+      "textColor": "#F2F2F2",
+      "height": 205,
+      "width": 25,
+      "rating": 0,
+      "title": "Beneath a Scarlet Sky",
+      "author": "Mark Sullivan",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9781503943377",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781503943377-L.jpg"
+    },
+    {
+      "spineColor": "#C45C26",
+      "textColor": "#FFF5EE",
+      "height": 172,
+      "width": 28,
+      "rating": 0,
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9780671027032",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg"
+    },
+    {
+      "spineColor": "#C4A35A",
+      "textColor": "#1C1714",
+      "height": 179,
+      "width": 31,
+      "rating": 0,
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "status": "read",
+      "year": 2022,
+      "isbn": "9780525559474",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg"
+    },
+    {
+      "spineColor": "#5B7C99",
+      "textColor": "#F4F7FA",
+      "height": 186,
+      "width": 34,
+      "rating": 0,
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9781590302255",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781590302255-L.jpg"
+    },
+    {
+      "spineColor": "#8B3A4A",
+      "textColor": "#FFEDEA",
+      "height": 193,
+      "width": 37,
+      "rating": 0,
+      "title": "How to Win at the Sport of Business",
+      "author": "Mark Cuban",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780349410470",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780349410470-L.jpg"
+    },
+    {
+      "spineColor": "#E8B86D",
+      "textColor": "#2A1F14",
+      "height": 200,
+      "width": 26,
+      "rating": 0,
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780857197689",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg"
+    },
+    {
+      "spineColor": "#4A5D4E",
+      "textColor": "#EAF2EC",
+      "height": 207,
+      "width": 29,
+      "rating": 0,
+      "title": "Read People Like a Book",
+      "author": "Patrick King",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9781647432508",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781647432508-L.jpg"
+    },
+    {
+      "spineColor": "#6B4E71",
+      "textColor": "#F7EFF8",
+      "height": 174,
+      "width": 32,
+      "rating": 0,
+      "title": "1984",
+      "author": "George Orwell",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780451524935",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+    },
+    {
+      "spineColor": "#2F5D4A",
+      "textColor": "#E8F5EE",
+      "height": 181,
+      "width": 35,
+      "rating": 0,
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780451526342",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451526342-L.jpg"
+    },
+    {
+      "spineColor": "#8B4513",
+      "textColor": "#F5E6D3",
+      "height": 188,
+      "width": 24,
+      "rating": 0,
+      "title": "Unscripted",
+      "author": "MJ DeMarco",
+      "status": "read",
+      "year": 2023,
+      "isbn": "9780987511034",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780987511034-L.jpg"
+    },
+    {
+      "spineColor": "#1A1A2E",
+      "textColor": "#EAEAEA",
+      "height": 195,
+      "width": 27,
+      "rating": 0,
+      "title": "The Log of a Cowboy",
+      "author": "Andy Adams",
+      "status": "read",
+      "year": 2024,
+      "isbn": "9780143039686",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780143039686-L.jpg"
+    },
+    {
+      "spineColor": "#4A3728",
+      "textColor": "#F0E6D8",
+      "height": 202,
+      "width": 30,
+      "rating": 0,
+      "title": "The Paradox of Choice",
+      "author": "Barry Schwartz",
+      "status": "read",
+      "year": 2025,
+      "isbn": "9780060005689",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780060005689-L.jpg"
+    },
+    {
+      "spineColor": "#7A1F2B",
+      "textColor": "#FFE8EB",
+      "height": 209,
+      "width": 33,
+      "rating": 0,
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "status": "read",
+      "year": 2025,
+      "isbn": "9780140449266",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140449266-L.jpg"
+    },
+    {
+      "spineColor": "#3E5641",
+      "textColor": "#E7F0E8",
+      "height": 176,
+      "width": 36,
+      "rating": 0,
+      "title": "Atlas Shrugged",
+      "author": "Ayn Rand",
+      "status": "read",
+      "year": 2026,
+      "isbn": "9780451191144",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451191144-L.jpg"
+    },
+    {
+      "spineColor": "#B8860B",
+      "textColor": "#1C1714",
+      "height": 183,
+      "width": 25,
+      "rating": 0,
+      "title": "The Four Agreements",
+      "author": "Don Miguel Ruiz",
+      "status": "read",
+      "year": 2026,
+      "isbn": "9781878424310",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781878424310-L.jpg"
+    },
+    {
+      "spineColor": "#2E4057",
+      "textColor": "#E8EEF5",
+      "height": 190,
+      "width": 28,
+      "rating": 0,
+      "title": "The Little Book of Common Sense Investing",
+      "author": "John C. Bogle",
+      "status": "want",
+      "isbn": "9781119404507",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781119404507-L.jpg"
+    },
+    {
+      "spineColor": "#5C4033",
+      "textColor": "#F5EDE4",
+      "height": 197,
+      "width": 31,
+      "rating": 0,
+      "title": "Margin of Safety",
+      "author": "Seth Klarman",
+      "status": "want",
+      "isbn": "9780887305108",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780887305108-L.jpg"
+    },
+    {
+      "spineColor": "#0F4C5C",
+      "textColor": "#E6F4F5",
+      "height": 204,
+      "width": 34,
+      "rating": 0,
+      "title": "The Lessons of History",
+      "author": "Will & Ariel Durant",
+      "status": "want",
+      "isbn": "9781439149959",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781439149959-L.jpg"
+    },
+    {
+      "spineColor": "#6B2D5C",
+      "textColor": "#F8EAF4",
+      "height": 171,
+      "width": 37,
+      "rating": 0,
+      "title": "The War of the Worlds",
+      "author": "H.G. Wells",
+      "status": "want",
+      "isbn": "9780241341346",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780241341346-L.jpg"
+    },
+    {
+      "spineColor": "#3D405B",
+      "textColor": "#EEF0F7",
+      "height": 178,
+      "width": 26,
+      "rating": 0,
+      "title": "The Iliad",
+      "author": "Homer",
+      "status": "want",
+      "isbn": "9780140275368",
+      "note": "Listed with The Odyssey",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140275368-L.jpg"
+    },
+    {
+      "spineColor": "#BC6C25",
+      "textColor": "#FFF5E8",
+      "height": 185,
+      "width": 29,
+      "rating": 0,
+      "title": "The Odyssey",
+      "author": "Homer",
+      "status": "want",
+      "isbn": "9780140268867",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140268867-L.jpg"
+    }
+  ],
+  "music": {
+    "tracks": [
+      {
+        "title": "Pathos (Live at the Royal Albert Hall)",
+        "artist": "Ludovico Einaudi",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/57b095ef7c5cde55c7fb016ec4ce6301/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/9/3/0/e93f0ab4447384ca95821189a8e9714b.mp3?hdnea=exp=1785885383~acl=/api/1/1/e/9/3/0/e93f0ab4447384ca95821189a8e9714b.mp3*~data=user_id=0,application_id=42~hmac=98a90b1881fecc38977f18425a9195564eae64fb35f30c98452c48761881459c",
+        "link": "https://open.spotify.com/search/Pathos%20%28Live%20at%20the%20Royal%20Albert%20Hall%29%20Ludovico%20Einaudi",
+        "album": "Pathos (Live at the Royal Albert Hall)"
+      },
+      {
+        "title": "Stillness & Solace",
+        "artist": "FableForte",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/8bce34de4569654df9a873509ee95add/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/2/5/7/0/257c9b1cda4061e5b9644421cbe6140b.mp3?hdnea=exp=1785885379~acl=/api/1/1/2/5/7/0/257c9b1cda4061e5b9644421cbe6140b.mp3*~data=user_id=0,application_id=42~hmac=804dd97485e500eb6bcf79b635d143b163f0f28241e798fdceeeacc7dcd12664",
+        "link": "https://open.spotify.com/search/Stillness%20%26%20Solace%20FableForte",
+        "album": "Stillness & Solace"
+      },
+      {
+        "title": "Solace",
+        "artist": "Txmy",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/95f18500a68fc9be7bec11f1fe7d4183/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/d/c/5/0/dc51d9b14a488e292a7d5d2476a72345.mp3?hdnea=exp=1785885379~acl=/api/1/1/d/c/5/0/dc51d9b14a488e292a7d5d2476a72345.mp3*~data=user_id=0,application_id=42~hmac=2ec93385c0df2b88f404e4ffc0a1ab824ce435b61a1ab9223fcb7b9e8bc217ef",
+        "link": "https://open.spotify.com/search/Solace%20Txmy",
+        "album": "Solace"
+      },
+      {
+        "title": "Blissful",
+        "artist": "Txmy",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/57ea143fb8a3df262363b21ea914c122/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/9/4/d/0/94d8e0b9aed7864aff78346db9d0e3ef.mp3?hdnea=exp=1785885380~acl=/api/1/1/9/4/d/0/94d8e0b9aed7864aff78346db9d0e3ef.mp3*~data=user_id=0,application_id=42~hmac=272d6df4625872ae8b6ea7d180e4976d1d93b6a2104584eb3c80a81db3bbbc01",
+        "link": "https://open.spotify.com/search/Blissful%20Txmy",
+        "album": "Late Nights"
+      },
+      {
+        "title": "Nacar (feat. Nathan Ball)",
+        "artist": "Parra for Cuva",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/6fbdeceefd91a249466dc889abe640b1/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/c/b/e/0/cbea56d03d57e94c100ce22471d2c114.mp3?hdnea=exp=1785885380~acl=/api/1/1/c/b/e/0/cbea56d03d57e94c100ce22471d2c114.mp3*~data=user_id=0,application_id=42~hmac=c93135722aacd24670a065588c7a1e6c4b73061aa6a9f0fd5a1b95a884a243ac",
+        "link": "https://open.spotify.com/search/Nacar%20%28feat.%20Nathan%20Ball%29%20Parra%20for%20Cuva",
+        "album": "Nacar"
+      },
+      {
+        "title": "Don't Go",
+        "artist": "Christopher Dennis Coleman",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/639f6dc4d68b92572ac2abab71e3663d/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/5/3/1/0/5314c2b0653319e4c28cb30906d2778e.mp3?hdnea=exp=1785885381~acl=/api/1/1/5/3/1/0/5314c2b0653319e4c28cb30906d2778e.mp3*~data=user_id=0,application_id=42~hmac=c6c553d27965f79a16e2408c037fd8dd2e0728a7651fdd460bbcaa836a5c8685",
+        "link": "https://open.spotify.com/search/Don%27t%20Go%20Christopher%20Dennis%20Coleman",
+        "album": "Don't Go"
+      },
+      {
+        "title": "Onwards",
+        "artist": "Dylan John Sparkes",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/4a6fe40a8f938270923cdf2cf2d307b8/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/6/c/d/0/6cda066613c9d35c0ee0b181a185282d.mp3?hdnea=exp=1785885381~acl=/api/1/1/6/c/d/0/6cda066613c9d35c0ee0b181a185282d.mp3*~data=user_id=0,application_id=42~hmac=e5f34b45868a2456d338eb1c59abc3aad59828e0455460c4c4adb7493aa438d9",
+        "link": "https://open.spotify.com/search/Onwards%20Dylan%20John%20Sparkes",
+        "album": "Vibrations Of Love"
+      },
+      {
+        "title": "Golden Brown",
+        "artist": "Dramatica",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/bbf8318008691a08531f913497428b97/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/8/a/0/e8a7d3c93e837947054ee312c5b7dbee.mp3?hdnea=exp=1785885382~acl=/api/1/1/e/8/a/0/e8a7d3c93e837947054ee312c5b7dbee.mp3*~data=user_id=0,application_id=42~hmac=41348b5899fe23ae6f5a4aee6e97ed3aacbe0d01040cf43f7436f6ecc365b904",
+        "link": "https://open.spotify.com/search/Golden%20Brown%20Dramatica",
+        "album": "Golden Brown"
+      },
+      {
+        "title": "The Ghost in Your Smile",
+        "artist": "Les Très",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/61e06c660dab7fa60cff30e5b41d58b5/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/4/4/4/0/444b8dde8880b67344f7b76c27187644.mp3?hdnea=exp=1785885382~acl=/api/1/1/4/4/4/0/444b8dde8880b67344f7b76c27187644.mp3*~data=user_id=0,application_id=42~hmac=f9b6196752f22b77631dbb852d500e5d323d6f64bb43e7f4e92e31f76b1d6ccc",
+        "link": "https://open.spotify.com/search/The%20Ghost%20in%20Your%20Smile%20Les%20Tr%C3%A8s",
+        "album": "Les Très"
+      },
+      {
+        "title": "FOREVER",
+        "artist": "OAFF & Pratika Gopinath",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/143f33e8db79922d32a994cdf85fc98e/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/e/c/4/0/ec4eebaf2558316b268a892028e8e619.mp3?hdnea=exp=1785885383~acl=/api/1/1/e/c/4/0/ec4eebaf2558316b268a892028e8e619.mp3*~data=user_id=0,application_id=42~hmac=8bbd9ad8703110ca093c89e3b876af116c4e3bf38de476439e2f764516137d86",
+        "link": "https://open.spotify.com/search/FOREVER%20OAFF%20%26%20Pratika%20Gopinath",
+        "album": "Between Flowers"
+      },
+      {
+        "title": "Jind Mahi (Remix)",
+        "artist": "Mastane, Raaginder, DJ Sudi & Malkit Singh",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/c5734b387ee94b1043fc80d0368f4d16/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/1/0/18160f9867724fa363deb11a1e96417d.mp3?hdnea=exp=1785885386~acl=/api/1/1/1/8/1/0/18160f9867724fa363deb11a1e96417d.mp3*~data=user_id=0,application_id=42~hmac=4e5aac74c4586e9892c04f5e2353e0284f1b2ebfa26f800889b90add22c1b645",
+        "link": "https://open.spotify.com/search/Jind%20Mahi%20%28Remix%29%20Mastane%2C%20Raaginder%2C%20DJ%20Sudi%20%26%20Malkit%20Singh",
+        "album": "Jind Mahi"
+      },
+      {
+        "title": "Symphony No. 6 in F Major, Op. 68 \"Pastoral\"",
+        "artist": "Berliner Philharmoniker & Herbert von Karajan",
+        "cover": "https://cdn-images.dzcdn.net/images/cover/a03b4bbb48523dedddd7f92f856d0972/1000x1000-000000-80-0-0.jpg",
+        "preview": "https://cdnt-preview.dzcdn.net/api/1/1/c/4/7/0/c475881b72f8d1f867a44a15ebb435d2.mp3?hdnea=exp=1785885387~acl=/api/1/1/c/4/7/0/c475881b72f8d1f867a44a15ebb435d2.mp3*~data=user_id=0,application_id=42~hmac=ae5d669f74ce985acbd27b192996c66800df07eff2af71db61c97abd1cf192b6",
+        "link": "https://open.spotify.com/search/Symphony%20No.%206%20in%20F%20Major%2C%20Op.%2068%20%22Pastoral%22%20Berliner%20Philharmoniker%20%26%20Herbert%20von%20Karajan",
+        "album": "Beethoven: The 9 Symphonies"
+      }
+    ]
+  }
+}
