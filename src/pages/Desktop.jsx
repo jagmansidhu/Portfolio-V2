@@ -11,6 +11,7 @@ const folders = [
   { label: 'projects', to: '/projects', style: { bottom: '20%', left: '18%' }, delay: 0.32, rotate: 3 },
   { label: 'library', to: '/books', style: { top: '18%', right: '15%' }, delay: 0.24, rotate: 5 },
   { label: 'data', to: '/data', style: { bottom: '22%', right: '14%' }, delay: 0.38, rotate: -6 },
+  { label: 'music', to: '/music', style: { bottom: '17%', left: '61%' }, delay: 0.3, rotate: -3 },
 ];
 
 export default function Desktop() {

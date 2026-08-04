@@ -14,7 +14,7 @@
     {
       "institution": "University of British Columbia",
       "degree": "Bachelor's (Computing Science / CS Major)",
-      "status": "In progress — 4th year",
+      "status": "In progress \u2014 4th year",
       "location": "Vancouver, BC",
       "notes": "Also completed ECON 398 coursework tied to the OAS labour participation research project."
     }
@@ -118,7 +118,7 @@
     {
       "role": "Software Developer",
       "company": "UBC Men's Mental Health Club",
-      "subtitle": "Sept 2025 – Present",
+      "subtitle": "Sept 2025 \u2013 Present",
       "location": "Vancouver, BC",
       "desc": [
         "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
@@ -138,7 +138,7 @@
     {
       "role": "IT Support Specialist",
       "company": "SSL Computers",
-      "subtitle": "Jan 2023 – Jun 2023",
+      "subtitle": "Jan 2023 \u2013 Jun 2023",
       "location": "Calgary, AB",
       "desc": [
         "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
@@ -155,11 +155,11 @@
   "projects": [
     {
       "title": "UBC-Newcomers",
-      "subtitle": "May 2026 · ",
-      "subtitleBold": "UBC CIC × AWS Hackathon Winner",
+      "subtitle": "May 2026 \u00b7 ",
+      "subtitleBold": "UBC CIC \u00d7 AWS Hackathon Winner",
       "tagline": "Campus connection app for transfer, international, and first-year students",
       "desc": [
-        "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
+        "Won the UBC CIC \u00d7 AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
       ],
       "tech": [
         "TypeScript",
@@ -174,7 +174,7 @@
     },
     {
       "title": "TheRoommate",
-      "subtitle": "Aug 2025 – Present",
+      "subtitle": "Aug 2025 \u2013 Present",
       "tagline": "Housing app for roommates and landlords",
       "desc": [
         "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
@@ -194,7 +194,7 @@
     },
     {
       "title": "Nodify",
-      "subtitle": "Jan 2026 · nwHacks",
+      "subtitle": "Jan 2026 \u00b7 nwHacks",
       "tagline": "Email urgency scoring and trend dashboards with Gemini",
       "desc": [
         "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
@@ -208,7 +208,7 @@
     },
     {
       "title": "Lumina",
-      "subtitle": "Jun 2025 – Aug 2025",
+      "subtitle": "Jun 2025 \u2013 Aug 2025",
       "tagline": "Sentiment and intent classification from user text",
       "desc": [
         "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
@@ -242,7 +242,7 @@
       "subtitle": "Data Visualization",
       "tagline": "Formula 1 championship data from 1950 to 2020",
       "desc": [
-        "Visualized Kaggle F1 race data (1950–2020) in Power BI after cleaning with Power Query."
+        "Visualized Kaggle F1 race data (1950\u20132020) in Power BI after cleaning with Power Query."
       ],
       "tech": [
         "Power BI",
@@ -634,5 +634,9 @@
       "isbn": "9780140268867",
       "cover": "https://covers.openlibrary.org/b/isbn/9780140268867-L.jpg"
     }
-  ]
+  ],
+  "music": {
+    "tracks": [],
+    "artists": []
+  }
 }

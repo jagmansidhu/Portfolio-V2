@@ -5,6 +5,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Books from './pages/Books';
 import Data from './pages/Data';
+import Music from './pages/Music';
 import './index.css';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/books" element={<Books />} />
         <Route path="/data" element={<Data />} />
+        <Route path="/music" element={<Music />} />
       </Routes>
       <Analytics />
     </BrowserRouter>
