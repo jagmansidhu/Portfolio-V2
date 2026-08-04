@@ -12,17 +12,28 @@ export default function AboutModal({ open, onClose }) {
   useEffect(() => {
     if (!open) return undefined;
 
+    const prevActive = document.activeElement;
+    const prevOverflow = document.body.style.overflow;
+
     const onKey = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+      }
     };
 
     document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      const closeBtn = document.querySelector('.about-modal-close');
+      if (closeBtn && typeof closeBtn.focus === 'function') closeBtn.focus();
+    });
 
     return () => {
       document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
+      document.body.style.overflow = prevOverflow;
+      if (prevActive && typeof prevActive.focus === 'function') prevActive.focus();
     };
   }, [open, onClose]);
 
