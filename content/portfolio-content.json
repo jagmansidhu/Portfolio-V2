@@ -1,0 +1,242 @@
+{
+  "person": {
+    "name": "Jagman Sidhu",
+    "shortName": "Jag",
+    "brand": "JAGMAN",
+    "location": "Vancouver, BC",
+    "email": "jagmansidhu1@gmail.com",
+    "website": "https://jagmansidhu.com/",
+    "tagline": "Software Developer based in Vancouver. Building impactful experiences.",
+    "bio": "3rd year CS Major based in Vancouver. Building to create a net positive impact and mastering the craft of software engineering. Currently a Full-Stack Web Developer using Java, React, Typescript and SQL. Outside of coding, I love reading, weightlifting (225lb bench press), and building new projects.",
+    "kicker": "University of British Columbia"
+  },
+
+  "education": [
+    {
+      "institution": "University of British Columbia",
+      "degree": "Bachelor's (Computing Science / CS Major)",
+      "status": "In progress — 3rd year",
+      "location": "Vancouver, BC",
+      "notes": "Also completed ECON 398 coursework tied to the OAS labour participation research project."
+    }
+  ],
+
+  "links": {
+    "email": "mailto:jagmansidhu1@gmail.com",
+    "github": "https://github.com/jagmansidhu",
+    "linkedin": "https://linkedin.com/in/jagmans",
+    "website": "https://jagmansidhu.com/"
+  },
+
+  "photos": {
+    "hero": {
+      "path": "/assets/7464015829964488032.JPG",
+      "alt": "Jagman Sidhu",
+      "file": "public/assets/7464015829964488032.JPG"
+    },
+    "portrait": {
+      "path": "/assets/jag.jpg",
+      "file": "public/assets/jag.jpg"
+    },
+    "webclip": {
+      "path": "/assets/webclip.jpg",
+      "file": "public/assets/webclip.jpg"
+    },
+    "meme": {
+      "path": "/assets/meme.png",
+      "file": "public/assets/meme.png"
+    },
+    "memeoji": {
+      "path": "/assets/memeoji.jpeg",
+      "file": "public/assets/memeoji.jpeg"
+    },
+    "favicon": {
+      "path": "/assets/favicon-32x32.png",
+      "file": "public/assets/favicon-32x32.png"
+    },
+    "ogPreview": {
+      "path": "/assets/og-preview.png",
+      "note": "Referenced in meta tags; file may be missing from assets."
+    }
+  },
+
+  "projectScreenshots": {
+    "mensMentalHealth": {
+      "path": "/assets/MensMentalHealthWeb.png",
+      "file": "public/assets/MensMentalHealthWeb.png",
+      "relatedTo": "UBC Men's Mental Health Club"
+    },
+    "theRoommate": {
+      "path": "/assets/TheRoommateWeb.png",
+      "file": "public/assets/TheRoommateWeb.png",
+      "relatedTo": "TheRoommate"
+    }
+  },
+
+  "documents": {
+    "oasPaper": {
+      "path": "/assets/papers/oas-labour-participation.pdf",
+      "file": "public/assets/papers/oas-labour-participation.pdf",
+      "relatedTo": "Does OAS cause a decline in labour participation rates?"
+    }
+  },
+
+  "skills": {
+    "languages": ["Java", "TypeScript", "C++", "C", "SQL", "HTML/CSS"],
+    "frameworks": ["Spring Boot", "Spring Security", "React", "Next.js", "Tailwind CSS"],
+    "databasesAndSecurity": ["PostgreSQL", "JWT", "OAuth 2.0", "REST APIs", "WebSocket"],
+    "cloudAndDevops": ["AWS (EC2, S3, RDS)", "Docker", "GitHub Actions", "Linux", "Git"],
+    "tools": ["Jira", "Postman", "Maven", "JUnit", "Chai", "Railway"]
+  },
+
+  "experience": [
+    {
+      "role": "Software Developer",
+      "company": "UBC Men's Mental Health Club",
+      "subtitle": "Sept 2025 – Present",
+      "location": "Vancouver, BC",
+      "desc": [
+        "Full-stack club site for 65+ members with Stripe membership checkout, JWT and Google OAuth login, and an admin dashboard for events and finances."
+      ],
+      "tech": ["Spring Boot", "Next.js", "PostgreSQL", "REST APIs", "Java", "TypeScript"],
+      "projectLink": "https://ubcmmhc.com/",
+      "githubLink": "https://github.com/UBC-MMHC",
+      "screenshot": "/assets/MensMentalHealthWeb.png"
+    },
+    {
+      "role": "IT Support Specialist",
+      "company": "SSL Computers",
+      "subtitle": "Jan 2023 – Jun 2023",
+      "location": "Calgary, AB",
+      "desc": [
+        "Hardware repair and network support on Windows, macOS, and Linux. Wrote PowerShell and Bash scripts that cut diagnostic turnaround by 40%."
+      ],
+      "tech": ["Windows", "macOS", "Linux", "PowerShell", "Bash"]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "UBC-Newcomers",
+      "subtitle": "May 2026 · ",
+      "subtitleBold": "UBC CIC × AWS Hackathon Winner",
+      "tagline": "Campus connection app for transfer, international, and first-year students",
+      "desc": [
+        "Won the UBC CIC × AWS Hackathon. Built UBC-Newcomers with a geofenced campus map, scraped club and faculty events, and peer matching via Claude on AWS Bedrock."
+      ],
+      "tech": ["TypeScript", "AWS ECS", "Amazon Cognito", "AWS Bedrock", "Amazon S3", "Claude"],
+      "githubLink": "https://github.com/wtarit/UBC-Newcomers",
+      "linkedinLink": "https://www.linkedin.com/posts/ubc-cic_ubc-generativeai-hackathon-activity-7464827663828803585-sK7Y"
+    },
+    {
+      "title": "TheRoommate",
+      "subtitle": "Aug 2025 – Present",
+      "tagline": "Housing app for roommates and landlords",
+      "desc": [
+        "Web app for expense splitting, chores, lease documents, and landlord messaging. Deployed on Railway with Spring Boot, React, PostgreSQL, and WebSocket."
+      ],
+      "tech": ["Spring Boot", "React", "TypeScript", "PostgreSQL", "Docker", "WebSocket", "Railway"],
+      "projectLink": "https://theroommate-production.up.railway.app/",
+      "githubLink": "https://github.com/jagmansidhu/DaRoommate",
+      "screenshot": "/assets/TheRoommateWeb.png"
+    },
+    {
+      "title": "Nodify",
+      "subtitle": "Jan 2026 · nwHacks",
+      "tagline": "Email urgency scoring and trend dashboards with Gemini",
+      "desc": [
+        "Built at nwHacks 2026. Uses the Gemini API to categorize emails and score urgency; includes a dashboard for trends in security alerts, meetings, and bills."
+      ],
+      "tech": ["Next.js", "TypeScript", "Gemini API"],
+      "githubLink": "https://github.com/jagmansidhu/nodify"
+    },
+    {
+      "title": "Lumina",
+      "subtitle": "Jun 2025 – Aug 2025",
+      "tagline": "Sentiment and intent classification from user text",
+      "desc": [
+        "Fine-tuned Transformer models to classify sentiment and intent from free-text input."
+      ],
+      "tech": ["Python", "Transformers", "Pandas", "NumPy"],
+      "githubLink": "https://github.com/jagmansidhu/Lumina"
+    }
+  ],
+
+  "featured": [
+    {
+      "title": "Men's Mental Health Club",
+      "link": "https://ubcmmhc.com/",
+      "image": "/assets/MensMentalHealthWeb.png",
+      "type": "COMMUNITY PLATFORM"
+    },
+    {
+      "title": "TheRoommate",
+      "link": "https://theroommate-production.up.railway.app/",
+      "image": "/assets/TheRoommateWeb.png",
+      "type": "HOUSING MANAGEMENT"
+    }
+  ],
+
+  "dataProjects": [
+    {
+      "title": "F1 Data Visualization",
+      "subtitle": "Data Visualization",
+      "tagline": "Formula 1 championship data from 1950 to 2020",
+      "desc": [
+        "Visualized Kaggle F1 race data (1950–2020) in Power BI after cleaning with Power Query."
+      ],
+      "tech": ["Power BI", "Power Query", "Kaggle"],
+      "githubLink": "https://github.com/jagmansidhu/Data_Visualization_F1"
+    },
+    {
+      "title": "Does OAS cause a decline in labour participation rates?",
+      "subtitle": "ECON 398",
+      "tagline": "Difference-in-differences study with 2022 Canada Census data",
+      "desc": [
+        "Tested whether Old Age Security affects labour force participation using a differences-in-differences model with age eligibility, gender, income, and education controls. Found insignificant evidence that OAS affects participation."
+      ],
+      "tech": ["R", "Difference-in-Differences", "Canada Census 2022"],
+      "githubLink": "https://github.com/jagmansidhu/OAS_Analysis_398",
+      "paperLink": "/assets/papers/oas-labour-participation.pdf"
+    }
+  ],
+
+  "seo": {
+    "title": "Jagman Sidhu",
+    "description": "Jagman Sidhu - Software Engineer Portfolio. Computing Science at UBC.",
+    "ogTitle": "Jagman Sidhu | Software Engineer",
+    "ogDescription": "Software Developer based in Vancouver. Building impactful experiences.",
+    "ogImage": "/assets/og-preview.png"
+  },
+
+  "assetInventory": {
+    "keptInPublic": [
+      "public/assets/7464015829964488032.JPG",
+      "public/assets/jag.jpg",
+      "public/assets/webclip.jpg",
+      "public/assets/meme.png",
+      "public/assets/memeoji.jpeg",
+      "public/assets/MensMentalHealthWeb.png",
+      "public/assets/TheRoommateWeb.png",
+      "public/assets/favicon-32x32.png",
+      "public/assets/papers/oas-labour-participation.pdf",
+      "public/favicon.svg",
+      "public/icons.svg"
+    ],
+    "legacyIconsRemovedWithCode": [
+      "gmail.svg",
+      "github.svg",
+      "icons8-linkedin.svg",
+      "home.svg",
+      "menu.svg",
+      "back.svg",
+      "browser.svg",
+      "code.svg",
+      "database.svg",
+      "dns.svg",
+      "favorite.svg",
+      "grid-top-right.svg"
+    ],
+    "note": "Photos, screenshots, favicon, and the OAS paper were kept under public/. Decorative SVG icons and styles.css were removed with the old UI."
+  }
+}
