@@ -94,6 +94,17 @@ export default function Desktop() {
           <p className="desktop-bio">{content.person.bio}</p>
         </MotionDiv>
       </div>
+
+      <p className="desktop-credit">
+        desktop layout inspired by{' '}
+        <a
+          href="https://www.behance.net/gallery/239103229/PORTFOLIO-2025-web-design-social-media-design"
+          target="_blank"
+          rel="noreferrer"
+        >
+          PORTFOLIO 2025 on Behance
+        </a>
+      </p>
     </main>
   );
 }

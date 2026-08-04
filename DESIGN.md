@@ -9,6 +9,8 @@ A personal Finder desktop for Jagman Sidhu (UBC CS, Vancouver). The site opens a
 **Signature (desktop):** cream Finder field, mono filenames from real work, brand *jagman* as the center mark.  
 **Signature (library):** wooden shelves of real spines; pull a book out in 3D, cover toward you; put it away spine-first so it never clips the neighbor.
 
+**Inspiration:** Desktop layout adapted from [PORTFOLIO 2025 | web design & social media design](https://www.behance.net/gallery/239103229/PORTFOLIO-2025-web-design-social-media-design) on Behance.
+
 ---
 
 ## Desktop (`/`)
